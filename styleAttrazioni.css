@@ -1,0 +1,134 @@
+body{
+	margin:0;padding:0;
+	background: #e2e2e0;
+	color: #666;
+	font: 16px/28px;
+	font-family: "Courier", sans-serif;
+	line-height:22px;
+}
+
+h1,h2{
+	/* font-family:oswald; */
+	text-transform:uppercase;
+	font-weight:normal;
+}
+
+a{
+	color:#21aabd;
+	text-decoration:none;
+}
+
+a:hover{
+	color:#333;
+	text-decoration:underline;
+}
+
+#container{
+	/* width: 960px; */
+	margin: 0 auto;
+	background:#fff
+}
+
+#header{
+	/* width:920px; */
+	padding:20px;
+	background:#21aabd;
+}
+
+/*** Nav ***/	
+#nav{
+	/* width:960px; */
+	background:#666;
+	color:#fff;
+	}
+
+#nav a{
+	color:#fff;
+	padding:15px 20px;
+	display:inline-block;
+	text-decoration:none;
+	text-transform:uppercase;
+	/*** font-family:oswald; ***/
+}
+
+#nav a:hover{background:#333;}
+
+#mes-full{
+	/*width:920; */
+	padding:20px;
+	clear:both;
+	background: #e2e2e0;
+}
+
+.items-evi {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.item-evi {
+    width:280px;
+	padding:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/*** Contenuto ***/
+#content{
+    width:650px;
+    padding:20px;
+    float:left;
+}
+
+#content a:visited {
+    text-decoration: none;
+    color: #666;
+}
+
+#content a:hover {
+    text-decoration: none;
+    color: #21aabd;
+}
+
+#content a:active {
+    text-decoration: none;
+}
+
+#content .articolo{
+    border-bottom:1px solid #eee;
+    min-height:190px;
+    padding:0px 0 10px 0;
+}
+
+#content .articolo img{
+    width:22%;
+    float:left;
+    margin: 0 20px 0 0;
+}
+
+#content .last{
+    border-bottom:none;
+}
+
+/*** Sidebar ***/
+#sidebar{
+    margin-top: 20px;
+    margin-right: 20px;
+    border: 2px solid #666;
+    width:260px;
+    padding:20px;
+    float:right;
+}
+
+#footer{
+    /* width:920px; */
+    padding:20px;
+    font-size: 10px;
+    clear:both;
+    background: #666;
+    color:#fff
+}
