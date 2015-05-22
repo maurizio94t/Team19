@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'QualiteDeluxePlatinium';
+    src: url('QualiteDeluxePlatinium.eot');
+    src: local('QualiteDeluxePlatinium'), url('QualiteDeluxePlatinium.ttf') format('truetype');
+}
+
 body{
 	margin:0;padding:0;
 	background: #e2e2e0;
@@ -8,10 +14,10 @@ body{
 }
 
 h1,h2{
-	/* font-family:oswald; */
-	text-transform:uppercase;
+	/* text-transform:uppercase; */
 	font-weight:normal;
 }
+
 
 a{
 	color:#21aabd;
@@ -29,10 +35,26 @@ a:hover{
 	background:#fff
 }
 
-#header{
+#header {
 	/* width:920px; */
-	padding:20px;
-	background:#21aabd;
+    height:160px;
+	padding:10px;
+	background:white; /* colore base #21aabd */
+    /* line-height:160px;      stessa dimensione del contenitore per centrare tutto in verticale */
+}
+
+#header img{
+    height: 165px;
+    width: auto;
+    float: left;
+}
+
+#header h1{
+    margin-left: 10px;
+    font-family:"QualiteDeluxePlatinium", sans-serif;
+    font-size:50px;
+    line-height:100px;
+    float: left;
 }
 
 /*** Nav ***/	

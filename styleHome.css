@@ -2,7 +2,7 @@
     font-family: 'QualiteDeluxePlatinium';
     src: url('QualiteDeluxePlatinium.eot');
     src: local('QualiteDeluxePlatinium'), url('QualiteDeluxePlatinium.ttf') format('truetype');
-    }
+}
 
 body{
 	margin:0;padding:0;
