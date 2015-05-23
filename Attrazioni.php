@@ -1,3 +1,5 @@
+<?php include_once('tema.php'); ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,17 +13,8 @@
 <body>
 
 <div id="container">
-	<div id="header">
-        <img src="img/ApuliaLogo.png" />
-		<h1>Visita la Puglia come non hai mai fatto...</h1>
-	</div>
-    
-	<div id="nav">
-		<a href="home.html">Home</a>
-        <a href="Attrazioni.html">Punti di interesse</a>
-        <a href="#">Contact</a>
-        <a href="#">About</a>
-	</div>
+	<?php header(); ?>
+    <?php nav(); ?>
 	
     <div id="mes-full">Punti di interesse</div>
 
@@ -52,8 +45,7 @@
     
 	<div class="clear"></div>
     
-    <div id="footer">Se sei felice e tu lo sai, batti le mani...<br>
-    ...Ehh see vabbè!</div>
+    <?php footer(); ?>
     
     
 </div>
