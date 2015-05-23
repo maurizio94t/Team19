@@ -1,4 +1,6 @@
-<?php include_once('tema.php'); ?>
+<?php
+include_once ('tema.php');
+?>
 
 <!DOCTYPE html>
 <html>
@@ -26,9 +28,9 @@
 	<body>
 
 		<div id="container">
-		    
-            <?php header(); ?>
-            <?php nav(); ?>
+
+			<?php headerH(); ?>
+			<?php navH(); ?>
 
 			<div id="autenticazione" align="right">
 				<form method="POST" action="php_login/autenticazione.php" id="form_autenticazione" name="autenticazione">
@@ -64,9 +66,9 @@
 			</div>
 
 			<div class="clear"></div>
-			
-			<?php footer(); ?>
-		
+
+			<?php footerH(); ?>
+
 		</div>
 
 	</body>
