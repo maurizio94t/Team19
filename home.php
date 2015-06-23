@@ -29,9 +29,9 @@ include_once ('tema.php');
 
 		<div id="container">
 
-			<?php headerH(); ?>
 			<?php navH(); ?>
-
+			
+			<!--
 			<div id="autenticazione" align="right">
 				<form method="POST" action="php_login/autenticazione.php" id="form_autenticazione" name="autenticazione">
 					<label>Username/email</label>
@@ -43,6 +43,7 @@ include_once ('tema.php');
 					<label><a href="php_login/iscrizione.php" title="Registrazione">Se non sei registrato puoi farlo adesso</a></label>
 				</form>
 			</div>
+			-->
 
 			<div class="slider-wrapper theme-default">
 				<div id="slider" class="nivoSlider">
@@ -52,18 +53,41 @@ include_once ('tema.php');
 					<img src="img/d.jpg" alt="" title="Vieste" />
 				</div>
 			</div>
-
+			
+			<div id="titolo" align="center">
+			    Apulia Go
+			</div>
+			
+            <div id="logo">
+                <img src="img/ApuliaLogo.png" />
+            </div>
+            
 			<div class="items-evi">
 				<div class="item-evi">
+				    <img src="img/a.jpg" alt="errore" width="100%"/>
 					Il mondo è un libro, e quelli che non viaggiano ne leggono solo una pagina.
 				</div>
 				<div class="item-evi">
+				    <img src="img/a.jpg" alt="errore" width="100%"/>
 					Viaggiare è essere infedeli. Siatelo senza rimorsi. Dimenticate i vostri amici per degli sconosciuti.
 				</div>
 				<div class="item-evi">
+				    <img src="img/a.jpg" alt="errore" width="100%"/>
 					Le radici sono importanti, nella vita di un uomo, ma noi uomini abbiamo le gambe, non le radici, e le gambe sono fatte per andare altrove.
 				</div>
 			</div>
+			
+			<div class="items-evi">
+                <div class="item-evi">
+                    <img src="img/a.jpg" alt="errore" width="100%"/>
+                </div>
+                <div class="item-evi">
+                    <img src="img/a.jpg" alt="errore" width="100%"/>
+                </div>
+                <div class="item-evi">
+                    <img src="img/a.jpg" alt="errore" width="100%"/>
+                </div>
+            </div>
 
 			<div class="clear"></div>
 

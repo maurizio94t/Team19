@@ -59,6 +59,7 @@ a:hover{
 /*** Nav ***/	
 #nav {
 	/* width:960px; */
+	margin-left: 130px;
 	background:#666;
 	color:#fff;
 	}
@@ -74,8 +75,30 @@ a:hover{
 
 #nav a:hover{background:#333;}
 
+/*** Prova cbnello logo Z-INDEX su slider ***/
+#logo img {
+	z-index: 100;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 165px;
+    width: auto;
+}
+
+#titolo {
+	z-index: 100;
+	position: absolute;
+	top: 200px;
+	text-align: center;
+    font-family:"QualiteDeluxePlatinium", sans-serif;
+    font-size:50px;
+}
+
 /*** Slider ***/	
-.slider-wrapper	{width:auto;}
+.slider-wrapper	{
+	z-index: 0;
+	width:auto;
+}
 
 .items-evi {
     margin-top: 5px;

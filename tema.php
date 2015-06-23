@@ -3,7 +3,7 @@ function headerH() {
 ?>
 
 <div id="header">
-	<img src="img/ApuliaLogo.png" />
+	
 	<h1>Visita la Puglia come non hai mai fatto...</h1>
 </div>
 
