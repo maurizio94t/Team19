@@ -58,11 +58,18 @@ a:hover{
 }
 
 /*** Nav ***/	
-#nav{
+#nav {
 	/* width:960px; */
-	background:#666;
+	margin-left: 130px;
+	background:#453F04;	/* #453F04 */
 	color:#fff;
-	}
+}
+
+#nav .selected {
+	/* width:960px; */
+	background:#9BA500;
+	color:#fff;
+}
 
 #nav a{
 	color:#fff;
@@ -75,11 +82,32 @@ a:hover{
 
 #nav a:hover{background:#333;}
 
+/*** Prova cbnello logo Z-INDEX su slider ***/
+#logo img {
+	z-index: 100;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 165px;
+    width: auto;
+}
+
+#titolo {
+	z-index: 100;
+	position: absolute;
+	top: 200px;
+	text-align: center;
+	left: 80%;
+    font-family:"QualiteDeluxePlatinium", sans-serif;
+    font-size:50px;
+}
+
 #mes-full{
 	/*width:920; */
 	padding:20px;
 	clear:both;
 	background: #e2e2e0;
+	margin-left: 130px;
 }
 
 .items-evi {
@@ -100,7 +128,7 @@ a:hover{
 }
 
 /*** Contenuto ***/
-#content{
+#content {
     width:650px;
     padding:20px;
     float:left;

@@ -1,22 +1,49 @@
 <?php
-function headerH() {
+function navH($num) {
 ?>
-
-<div id="header">
-	
-	<h1>Visita la Puglia come non hai mai fatto...</h1>
+<div id="lineNav">
+<div id="nav">
+    <?php
+    if($num==1) {
+        echo '<a class="selected" href="home.php">Home</a>';
+    }else{
+        echo '<a href="home.php">Home</a>';
+    }
+    if($num==2) {
+        echo '<a class="selected" href="Attrazioni.php">Punti di interesse</a>';
+    }else{
+        echo '<a href="Attrazioni.php">Punti di interesse</a>';
+    }
+    if($num==3) {
+        echo '<a class="selected" href="#">Contact</a>';
+    }else{
+        echo '<a href="#">Contact</a>';
+    }
+    if($num==4) {
+        echo '<a class="selected" href="#">About</a>';
+    }else{
+        echo '<a href="#">About</a>';
+    }
+    ?>
+</div>
 </div>
 
 <?php
 }
-function navH() {
+function tag_lineH() {
 ?>
 
-<div id="nav">
-	<a href="home.php">Home</a>
-	<a href="Attrazioni.php">Punti di interesse</a>
-	<a href="#">Contact</a>
-	<a href="#">About</a>
+<div id="tag_line">
+    Love the land.<br><br><br><br>Live the life.
+</div>
+
+<?php
+}
+function logoH() {
+?>
+
+<div id="logo">
+    <img src="img/ApuliaLogo.png" />
 </div>
 
 <?php

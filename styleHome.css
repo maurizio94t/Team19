@@ -57,12 +57,15 @@ a:hover{
 }
 
 /*** Nav ***/	
+#lineNav {
+	background:#2F2400;
+}
 #nav {
 	/* width:960px; */
 	margin-left: 130px;
-	background:#666;
+	background:#2F2400;	/*362901*/
 	color:#fff;
-	}
+}
 
 #nav a {
 	color:#fff;
@@ -71,6 +74,12 @@ a:hover{
 	text-decoration:none;
 	text-transform:uppercase;
 	/*** font-family:oswald; ***/
+}
+
+#nav .selected {
+	/* width:960px; */
+	background:#9BA500;
+	color:#fff;
 }
 
 #nav a:hover{background:#333;}
@@ -85,13 +94,15 @@ a:hover{
     width: auto;
 }
 
-#titolo {
+#tag_line {
 	z-index: 100;
 	position: absolute;
-	top: 200px;
-	text-align: center;
+	top: 20%;
+	text-align: left;
+	left: 70%;
     font-family:"QualiteDeluxePlatinium", sans-serif;
-    font-size:50px;
+    color:#FFFFFF;
+    font-size:80px;
 }
 
 /*** Slider ***/	
@@ -100,8 +111,9 @@ a:hover{
 	width:auto;
 }
 
-.items-evi {
-    margin-top: 5px;
+.items-evi-row {
+    padding-top: 10px;
+    padding-bottom: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -109,12 +121,45 @@ a:hover{
 }
 
 .item-evi {
+    width:500px;
+	padding:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border: 2px solid #666;
+}
+
+#greenStrip {
+	background: #FFE0A0;
+}
+
+#messfull {
+	text-align: center;
+}
+
+#greenStrip .items-eviG {
+    margin-top: -10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#greenStrip .item-eviG {
     width:280px;
 	padding:20px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     flex-wrap: wrap;
+    border: 2px solid #666;
+}
+
+#greenStrip .item-eviG img {
+	
 }
 
 #mes-full {

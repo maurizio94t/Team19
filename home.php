@@ -29,19 +29,19 @@ include_once ('tema.php');
 
 		<div id="container">
 
-			<?php navH(); ?>
-			
+			<?php navH(1); ?>
+
 			<!--
 			<div id="autenticazione" align="right">
-				<form method="POST" action="php_login/autenticazione.php" id="form_autenticazione" name="autenticazione">
-					<label>Username/email</label>
-					<input type="text" name="email_o_nome_utente" />
-					<label>Password</label>
-					<input type="password" name="password" id="password" />
-					<input type="submit" name="invio_dati" value="Invia"/>
-					<br/>
-					<label><a href="php_login/iscrizione.php" title="Registrazione">Se non sei registrato puoi farlo adesso</a></label>
-				</form>
+			<form method="POST" action="php_login/autenticazione.php" id="form_autenticazione" name="autenticazione">
+			<label>Username/email</label>
+			<input type="text" name="email_o_nome_utente" />
+			<label>Password</label>
+			<input type="password" name="password" id="password" />
+			<input type="submit" name="invio_dati" value="Invia"/>
+			<br/>
+			<label><a href="php_login/iscrizione.php" title="Registrazione">Se non sei registrato puoi farlo adesso</a></label>
+			</form>
 			</div>
 			-->
 
@@ -52,47 +52,41 @@ include_once ('tema.php');
 					<img src="img/c.jpg" alt="" title="La favolosa Polignano a mare" />
 					<img src="img/d.jpg" alt="" title="Vieste" />
 				</div>
+				<?php tag_lineH(); ?>
 			</div>
-			
-			<div id="titolo" align="center">
-			    Apulia Go
-			</div>
-			
-            <div id="logo">
-                <img src="img/ApuliaLogo.png" />
+
+			<?php logoH(); ?>
+
+            
+            <div id="greenStrip">
+                <div id="mes-full">
+                    Punti di interesse
+                </div>
+                <div class="items-eviG">
+                    <div class="item-eviG">
+                        <img src="img/a.jpg" alt="errore" width="100%"/>
+                    </div>
+                    <div class="item-eviG">
+                        <img src="img/a.jpg" alt="errore" width="100%"/>
+                    </div>
+                    <div class="item-eviG">
+                        <img src="img/a.jpg" alt="errore" width="100%"/>
+                    </div>
+                </div>
             </div>
             
-			<div class="items-evi">
+			<div class="items-evi-row">
 				<div class="item-evi">
-				    <img src="img/a.jpg" alt="errore" width="100%"/>
-					Il mondo è un libro, e quelli che non viaggiano ne leggono solo una pagina.
+					AAA
 				</div>
 				<div class="item-evi">
-				    <img src="img/a.jpg" alt="errore" width="100%"/>
-					Viaggiare è essere infedeli. Siatelo senza rimorsi. Dimenticate i vostri amici per degli sconosciuti.
-				</div>
-				<div class="item-evi">
-				    <img src="img/a.jpg" alt="errore" width="100%"/>
-					Le radici sono importanti, nella vita di un uomo, ma noi uomini abbiamo le gambe, non le radici, e le gambe sono fatte per andare altrove.
+					AAA
 				</div>
 			</div>
-			
-			<div class="items-evi">
-                <div class="item-evi">
-                    <img src="img/a.jpg" alt="errore" width="100%"/>
-                </div>
-                <div class="item-evi">
-                    <img src="img/a.jpg" alt="errore" width="100%"/>
-                </div>
-                <div class="item-evi">
-                    <img src="img/a.jpg" alt="errore" width="100%"/>
-                </div>
-            </div>
 
 			<div class="clear"></div>
 
 			<?php footerH(); ?>
-
 		</div>
 
 	</body>

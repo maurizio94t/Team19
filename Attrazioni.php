@@ -15,25 +15,32 @@ include_once ('tema.php');
 	<body>
 
 		<div id="container">
-		    
-			<?php headerH(); ?>
-            <?php navH(); ?>
-
+            <?php navH(2); ?>
+            
+            <?php logoH(); ?>
+            
 			<div id="mes-full">
 				Punti di interesse
 			</div>
 
 			<div id="content">
-				<div class="articolo">
+			    <a href="#"><div class="articolo">
 					<img src="http://www.marchettidesign.net/demo/pagina-web-html-css/img/times-square.jpg" />
 					<h2>Titolo dell' articolo</h2>
 					<p>
-						Testo dell'articolo, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Testo dell'articolo, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Testo dell'articolo, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Testo dell'articolo, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Testo dell'articolo, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Testo dell'articolo, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						Testo dell'articolo, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 					</p>
-				</div>
+				</div></a>
 
-				<a href="#">
-				<div class="articolo last">
+                <a href="#"><div class="articolo">
+                    <img src="http://www.marchettidesign.net/demo/pagina-web-html-css/img/times-square.jpg" />
+                    <h2>Titolo dell' articolo</h2>
+                    <p>
+                        Testo dell'articolo, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </div></a>
+
+				<a href="#"><div class="articolo last">
 					<img src="http://www.marchettidesign.net/demo/pagina-web-html-css/img/times-square.jpg" />
 					<h2>Titolo dell' articolo</h2>
 					<p>
