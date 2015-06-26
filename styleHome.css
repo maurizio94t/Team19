@@ -60,6 +60,7 @@ a:hover{
 #lineNav {
 	background:#2F2400;
 }
+
 #nav {
 	/* width:960px; */
 	margin-left: 130px;
@@ -97,18 +98,57 @@ a:hover{
 #tag_line {
 	z-index: 100;
 	position: absolute;
-	top: 20%;
+	top: 40%;	/* 20% */
 	text-align: left;
-	left: 70%;
+	left: 24%;	/* 70% */
     font-family:"QualiteDeluxePlatinium", sans-serif;
     color:#FFFFFF;
     font-size:80px;
+    opacity:0.9;
 }
 
 /*** Slider ***/	
 .slider-wrapper	{
 	z-index: 0;
 	width:auto;
+}
+
+.greenStrip {
+	margin-top: -1%;
+	padding-top: 10px;
+	/* background: #FFE0A0; */
+	background-image: url("img/sfondo1.jpg");
+}
+
+.greenStrip #descrizione {
+	
+}
+
+.greenStrip .items-eviG {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.greenStrip .item-eviG {
+    width:280px;
+	padding:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    flex-wrap: wrap;
+}
+
+.greenStrip .item-eviG img {
+	width: 250px; 
+    height: 250px;
+    border-radius: 50%;
+    
+    /* Allinea le immagini tonde al centro (calcoli fatti) */
+    margin-left: 6%;
 }
 
 .items-evi-row {
@@ -128,38 +168,6 @@ a:hover{
     justify-content: space-around;
     flex-wrap: wrap;
     border: 2px solid #666;
-}
-
-#greenStrip {
-	background: #FFE0A0;
-}
-
-#messfull {
-	text-align: center;
-}
-
-#greenStrip .items-eviG {
-    margin-top: -10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-#greenStrip .item-eviG {
-    width:280px;
-	padding:20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    border: 2px solid #666;
-}
-
-#greenStrip .item-eviG img {
-	
 }
 
 #mes-full {

@@ -57,11 +57,15 @@ a:hover{
     float: left;
 }
 
-/*** Nav ***/	
+/*** Nav ***/
+#lineNav {
+	background:#2F2400;
+}
+
 #nav {
 	/* width:960px; */
 	margin-left: 130px;
-	background:#453F04;	/* #453F04 */
+	background:#2F2400;
 	color:#fff;
 }
 

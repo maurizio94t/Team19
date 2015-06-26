@@ -34,7 +34,7 @@ function tag_lineH() {
 ?>
 
 <div id="tag_line">
-    Love the land.<br><br><br><br>Live the life.
+    Love the land. Live the life.
 </div>
 
 <?php

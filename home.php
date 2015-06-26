@@ -47,10 +47,8 @@ include_once ('tema.php');
 
 			<div class="slider-wrapper theme-default">
 				<div id="slider" class="nivoSlider">
-					<img src="img/a.jpg" alt="" title="Escursioni in mountain bike.."/>
-					<img src="img/b.jpg" alt="" title="Top-trekking" />
-					<img src="img/c.jpg" alt="" title="La favolosa Polignano a mare" />
-					<img src="img/d.jpg" alt="" title="Vieste" />
+					<img src="img/puglia1modificata.jpg" alt="" />
+					<img src="img/puglia2modificata.jpg" alt="" />
 				</div>
 				<?php tag_lineH(); ?>
 			</div>
@@ -58,13 +56,16 @@ include_once ('tema.php');
 			<?php logoH(); ?>
 
             
-            <div id="greenStrip">
-                <div id="mes-full">
-                    Punti di interesse
+            <div class="greenStrip">
+                <div id="descrizione">
+                    Testo dell'articolo, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    <br>
+                    Testo dell'articolo, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </div>
                 <div class="items-eviG">
                     <div class="item-eviG">
-                        <img src="img/a.jpg" alt="errore" width="100%"/>
+                        <img src="http://www.marchettidesign.net/demo/pagina-web-html-css/img/times-square.jpg" alt="errore" width="100%"/>
+                        <h5 align="center"> Vedi che ti mangi! </h5>
                     </div>
                     <div class="item-eviG">
                         <img src="img/a.jpg" alt="errore" width="100%"/>
