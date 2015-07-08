@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'QualiteDeluxePlatinium';
-    src: url('QualiteDeluxePlatinium.eot');
-    src: local('QualiteDeluxePlatinium'), url('QualiteDeluxePlatinium.ttf') format('truetype');
+    src: url('fonts/QualiteDeluxePlatinium.eot');
+    src: local('QualiteDeluxePlatinium'), url('fonts/QualiteDeluxePlatinium.ttf') format('truetype');
 }
 
 body{
@@ -63,7 +63,7 @@ a:hover{
 
 #nav {
 	/* width:960px; */
-	margin-left: 130px;
+	margin-left: 126px;
 	background:#2F2400;	/*362901*/
 	color:#fff;
 }

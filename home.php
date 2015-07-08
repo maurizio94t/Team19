@@ -47,7 +47,7 @@ include_once ('tema.php');
 
 			<div class="slider-wrapper theme-default">
 				<div id="slider" class="nivoSlider">
-					<img src="img/puglia1modificata.jpg" alt="" />
+					<img src="img/puglia1modified.png" alt="" />
 					<img src="img/puglia2modificata.jpg" alt="" />
 					<img src="img/bruchetta2modified.jpg" alt="" />
 					<img src="img/party.jpg" alt="" />
