@@ -49,33 +49,37 @@ include_once ('tema.php');
 				<div id="slider" class="nivoSlider">
 					<img src="img/puglia1modificata.jpg" alt="" />
 					<img src="img/puglia2modificata.jpg" alt="" />
+					<img src="img/bruchetta2modified.jpg" alt="" />
+					<img src="img/party.jpg" alt="" />
 				</div>
 				<?php tag_lineH(); ?>
+				<div class="bordo">
+					<img src="img/brosso.png" />
+				</div>
 			</div>
 
 			<?php logoH(); ?>
 
-            
-            <div class="greenStrip">
-                <div id="descrizione">
-                    Testo dell'articolo, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    <br>
-                    Testo dell'articolo, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </div>
-                <div class="items-eviG">
-                    <div class="item-eviG">
-                        <img src="http://www.marchettidesign.net/demo/pagina-web-html-css/img/times-square.jpg" alt="errore" width="100%"/>
-                        <h5 align="center"> Vedi che ti mangi! </h5>
-                    </div>
-                    <div class="item-eviG">
-                        <img src="img/a.jpg" alt="errore" width="100%"/>
-                    </div>
-                    <div class="item-eviG">
-                        <img src="img/a.jpg" alt="errore" width="100%"/>
-                    </div>
-                </div>
-            </div>
-            
+			<div class="greenStrip">
+				<div id="descrizione">
+					Testo dell'articolo, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					<br>
+					Testo dell'articolo, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				</div>
+				<div class="items-eviG">
+					<div class="item-eviG">
+						<img src="http://www.marchettidesign.net/demo/pagina-web-html-css/img/times-square.jpg" alt="errore" width="100%"/>
+						<h5 align="center"> Vedi che ti mangi! </h5>
+					</div>
+					<div class="item-eviG">
+						<img src="http://www.marchettidesign.net/demo/pagina-web-html-css/img/times-square.jpg" alt="errore" width="100%"/>
+					</div>
+					<div class="item-eviG">
+						<img src="http://www.marchettidesign.net/demo/pagina-web-html-css/img/times-square.jpg" alt="errore" width="100%"/>
+					</div>
+				</div>
+			</div>
+
 			<div class="items-evi-row">
 				<div class="item-evi">
 					AAA

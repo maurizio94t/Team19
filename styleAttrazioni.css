@@ -133,6 +133,7 @@ a:hover{
 
 /*** Contenuto ***/
 #content {
+	margin-top: 20px;
     width:650px;
     padding:20px;
     float:left;

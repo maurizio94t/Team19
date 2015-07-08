@@ -113,11 +113,21 @@ a:hover{
 	width:auto;
 }
 
+.bordo img {
+        background-repeat: repeat-x;
+        position: absolute;
+        top: 437px;
+        text-align: left;
+        left: 0%;
+        width: 100%;
+        z-index:200;
+}
+
 .greenStrip {
 	margin-top: -1%;
 	padding-top: 10px;
 	/* background: #FFE0A0; */
-	background-image: url("img/sfondo1.jpg");
+	background: #FFFFFF;
 }
 
 .greenStrip #descrizione {
