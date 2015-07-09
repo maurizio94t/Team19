@@ -68,14 +68,16 @@ include_once ('tema.php');
 				</div>
 				<div class="items-eviG">
 					<div class="item-eviG">
-						<img src="http://www.marchettidesign.net/demo/pagina-web-html-css/img/times-square.jpg" alt="errore" width="100%"/>
-						<h5 align="center"> Vedi che ti mangi! </h5>
+						<img src="img/CAT1.png" alt="errore" width="100%"/>
+						<h5 align="center"> Vedi che ti mangi </h5>
 					</div>
 					<div class="item-eviG">
-						<img src="http://www.marchettidesign.net/demo/pagina-web-html-css/img/times-square.jpg" alt="errore" width="100%"/>
+						<img src="img/CAT2.png" alt="errore" width="100%"/>
+						<h5 align="center"> A gradire </h5>
 					</div>
 					<div class="item-eviG">
-						<img src="http://www.marchettidesign.net/demo/pagina-web-html-css/img/times-square.jpg" alt="errore" width="100%"/>
+						<img src="img/CAT3.png" alt="errore" width="100%"/>
+						<h5 align="center"> Vai mo vai </h5>
 					</div>
 				</div>
 			</div>

@@ -15,11 +15,16 @@ function navH($num) {
         echo '<a href="Attrazioni.php">Punti di interesse</a>';
     }
     if($num==3) {
+        echo '<a class="selected" href="#">Accedi</a>';
+    }else{
+        echo '<a href="accedi.php">Accedi</a>';
+    }
+    if($num==4) {
         echo '<a class="selected" href="#">Contact</a>';
     }else{
         echo '<a href="#">Contact</a>';
     }
-    if($num==4) {
+    if($num==5) {
         echo '<a class="selected" href="#">About</a>';
     }else{
         echo '<a href="#">About</a>';

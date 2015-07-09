@@ -1,89 +1,92 @@
 @font-face {
-    font-family: 'QualiteDeluxePlatinium';
-    src: url('fonts/QualiteDeluxePlatinium.eot');
-    src: local('QualiteDeluxePlatinium'), url('fonts/QualiteDeluxePlatinium.ttf') format('truetype');
+	font-family: 'QualiteDeluxePlatinium';
+	src: url('fonts/QualiteDeluxePlatinium.eot');
+	src: local('QualiteDeluxePlatinium'), url('fonts/QualiteDeluxePlatinium.ttf') format('truetype');
 }
 
-body{
-	margin:0;padding:0;
+body {
+	margin: 0;
+	padding: 0;
 	background: #e2e2e0;
 	color: #666;
 	font: 16px/28px;
 	font-family: "Courier", sans-serif;
-	line-height:22px;
+	line-height: 22px;
 }
 
-h1,h2{
+h1, h2 {
 	/* text-transform:uppercase; */
-	font-weight:normal;
+	font-weight: normal;
 }
 
-a{
-	color:#21aabd;
-	text-decoration:none;
+a {
+	color: #21aabd;
+	text-decoration: none;
 }
 
-a:hover{
-	color:#333;
-	text-decoration:underline;
+a:hover {
+	color: #333;
+	text-decoration: underline;
 }
 
 #container {
 	/* width: 960px; */
 	margin: 0 auto;
-	background:#fff
+	background: #fff
 }
 
 #header {
 	/* width:920px; */
-    height:160px;
-	padding:10px;
-	background:white; /* colore base #21aabd */
-    /* line-height:160px;      stessa dimensione del contenitore per centrare tutto in verticale */
+	height: 160px;
+	padding: 10px;
+	background: hite; /* colore base #21aabd */
+	/* line-height:160px;      stessa dimensione del contenitore per centrare tutto in verticale */
 }
 
-#header img{
-    height: 165px;
-    width: auto;
-    float: left;
+#header img {
+	height: 165px;
+	width: auto;
+	float: left;
 }
 
-#header h1{
-    margin-left: 10px;
-    font-family:"QualiteDeluxePlatinium", sans-serif;
-    font-size:50px;
-    line-height:100px;
-    float: left;
+#header h1 {
+	margin-left: 10px;
+	font-family: "QualiteDeluxePlatinium", sans-serif;
+	font-size: 50px;
+	line-height: 100px;
+	float: left;
 }
 
-/*** Nav ***/	
+/*** Nav ***/
 #lineNav {
-	background:#2F2400;
+	background: #2F2400;
 }
 
 #nav {
 	/* width:960px; */
 	margin-left: 126px;
-	background:#2F2400;	/*362901*/
-	color:#fff;
+	background: #2F2400;	/*362901*/
+	color: #fff;
 }
 
 #nav a {
-	color:#fff;
-	padding:15px 20px;
-	display:inline-block;
-	text-decoration:none;
-	text-transform:uppercase;
+	color: #fff;
+	padding: 15px 20px;
+	display: inline-block;
+	text-decoration: none;
+	text-transform: uppercase;
 	/*** font-family:oswald; ***/
 }
 
 #nav .selected {
 	/* width:960px; */
-	background:#9BA500;
-	color:#fff;
+	background: #9BA500;
+	color: #fff;
 }
 
-#nav a:hover{background:#333;}
+#nav a:hover {
+	background: #333;
+}
 
 /*** Prova cbnello logo Z-INDEX su slider ***/
 #logo img {
@@ -92,7 +95,7 @@ a:hover{
 	top: 0px;
 	left: 0px;
 	height: 165px;
-    width: auto;
+	width: auto;
 }
 
 #tag_line {
@@ -101,26 +104,26 @@ a:hover{
 	top: 40%;	/* 20% */
 	text-align: left;
 	left: 24%;	/* 70% */
-    font-family:"QualiteDeluxePlatinium", sans-serif;
-    color:#FFFFFF;
-    font-size:80px;
-    opacity:0.9;
+	font-family: "QualiteDeluxePlatinium", sans-serif;
+	color: #FFFFFF;
+	font-size: 80px;
+	opacity: 0.9;
 }
 
-/*** Slider ***/	
-.slider-wrapper	{
+/*** Slider ***/
+.slider-wrapper {
 	z-index: 0;
-	width:auto;
+	width: auto;
 }
 
 .bordo img {
-        background-repeat: repeat-x;
-        position: absolute;
-        top: 437px;
-        text-align: left;
-        left: 0%;
-        width: 100%;
-        z-index:200;
+	background-repeat: repeat-x;
+	position: absolute;
+	top: 437px;
+	text-align: left;
+	left: 0%;
+	width: 100%;
+	z-index: 200;
 }
 
 .greenStrip {
@@ -131,67 +134,67 @@ a:hover{
 }
 
 .greenStrip #descrizione {
-	
+
 }
 
 .greenStrip .items-eviG {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
 }
 
 .greenStrip .item-eviG {
-    width:280px;
-	padding:20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: top;
-    flex-wrap: wrap;
+	width: 280px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: top;
+	flex-wrap: wrap;
+	font-size: 205%;
 }
 
 .greenStrip .item-eviG img {
-	width: 250px; 
-    height: 250px;
-    border-radius: 50%;
-    
-    /* Allinea le immagini tonde al centro (calcoli fatti) */
-    margin-left: 6%;
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	/* Allinea le immagini tonde al centro (calcoli fatti) */
+	margin-left: 6%;
 }
 
 .items-evi-row {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
 }
 
 .item-evi {
-    width:500px;
-	padding:20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    border: 2px solid #666;
+	width: 500px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	border: 2px solid #666;
 }
 
 #mes-full {
 	/*width:920; */
-	padding:20px;
-	clear:both;
+	padding: 20px;
+	clear: both;
 	background: #e2e2e0;
 }
 
 #footer {
-    /* width:920px; */
-    padding:20px;
-    font-size: 10px;
-    clear:both;
-    background: #666;
-    color:#fff
+	/* width:920px; */
+	padding: 20px;
+	font-size: 10px;
+	clear: both;
+	background: #666;
+	color: #fff
 }

@@ -1,90 +1,136 @@
 @font-face {
-    font-family: 'QualiteDeluxePlatinium';
-    src: url('QualiteDeluxePlatinium.eot');
-    src: local('QualiteDeluxePlatinium'), url('QualiteDeluxePlatinium.ttf') format('truetype');
+	font-family: 'QualiteDeluxePlatinium';
+	src: url('QualiteDeluxePlatinium.eot');
+	src: local('QualiteDeluxePlatinium'), url('QualiteDeluxePlatinium.ttf') format('truetype');
 }
 
-body{
-	margin:0;padding:0;
+body {
+	margin: 0;
+	padding: 0;
 	background: #e2e2e0;
 	color: #666;
 	font: 16px/28px;
 	font-family: "Courier", sans-serif;
-	line-height:22px;
+	line-height: 22px;
 }
 
-h1,h2{
+h1, h2 {
 	/* text-transform:uppercase; */
-	font-weight:normal;
+	font-weight: normal;
 }
 
-
-a{
-	color:#21aabd;
-	text-decoration:none;
+button {
+	width: 15em;
+	padding: .5em;
+	color: #ffffff;
+	text-shadow: 1px 1px 1px #000;
+	border: solid thin #882d13;
+	-webkit-border-radius: .7em;
+	-moz-border-radius: .7em;
+	border-radius: .7em;
+	-webkit-box-shadow: 2px 2px 3px #999;
+	box-shadow: 2px 2px 2px #bbb;
+	background-color: #ce401c;
+	background-image: -webkit-gradient(linear, left top, left bottom,
+	from(#e9ede8), to(#ce401c),color-stop(0.4, #8c1b0b));
 }
 
-a:hover{
-	color:#333;
-	text-decoration:underline;
+a {
+	color: #21aabd;
+	text-decoration: none;
 }
 
-#container{
+a:hover {
+	color: #333;
+	text-decoration: underline;
+}
+
+h3 {
+	text-align: center;
+	position: relative;
+	height: 1em;
+	font: bold 350% Tahoma, Arial, sans-serif;
+	font-family: "Californian FB";
+	margin: 1em 0 0;
+	color: #3FBCC3
+}
+h5 {
+	position: absolute;
+	margin-top: 10%;
+	margin-left: 20%;
+	font: bold 150% Tahoma, Arial, sans-serif;
+	font-family: "Franklin Gothic Book";
+	color: #3FBCC3;
+}
+
+h6 {
+
+	position: absolute;
+	margin-top: 15%;
+	margin-left: auto;
+	font: bold 100% Tahoma, Arial, sans-serif;
+	font-family: "Franklin Gothic Book";
+	color: #2F2400;
+}
+
+#container {
 	/* width: 960px; */
-	margin: 0 auto;
-	background:#fff
+	margin: 0px auto;
+	background: #e2e2e0;
 }
 
 #header {
-	/* width:920px; */
-    height:160px;
-	padding:10px;
-	background:white; /* colore base #21aabd */
-    /* line-height:160px;      stessa dimensione del contenitore per centrare tutto in verticale */
+	width: 520px;
+	height: 160px;
+	padding: 80px;
+	background: #21aabd; /* colore di prima: bianco */
+	/* line-height:160px;      stessa dimensione del contenitore per centrare tutto in verticale */
 }
 
-#header img{
-    height: 165px;
-    width: auto;
-    float: left;
+#header img {
+	height: 165px;
+	width: auto;
+	float: left;
 }
 
-#header h1{
-    margin-left: 10px;
-    font-family:"QualiteDeluxePlatinium", sans-serif;
-    font-size:50px;
-    line-height:100px;
-    float: left;
+#header h1 {
+	margin-left: 10px;
+	font-family: "QualiteDeluxePlatinium", sans-serif;
+	font-size: 50px;
+	line-height: 100px;
+	float: left;
 }
 
 /*** Nav ***/
 #lineNav {
-	background:#2F2400;
+	background: #2F2400;
 }
 
 #nav {
 	/* width:960px; */
-	margin-left: 130px;
-	background:#2F2400;
-	color:#fff;
+	margin-left: 126px;
+	background: #2F2400;	/*362901*/
+	color: #fff;
 }
 
 #nav .selected {
 	/* width:960px; */
-	background:#9BA500;
-	color:#fff;
+	background: #9BA500;
+	color: #fff;
 }
 
-#nav a{
-	color:#fff;
-	padding:15px 20px;
-	display:inline-block;
-	text-decoration:none;
-	text-transform:uppercase;
+#nav a {
+	color: #fff;
+	padding: 15px 20px;
+	display: inline-block;
+	text-decoration: none;
+	text-transform: uppercase;
 	/*** font-family:oswald; ***/
 }
 
-#nav a:hover{background:#333;}
+#nav a:hover {
+	background: #333;
+}
 
 /*** Prova cbnello logo Z-INDEX su slider ***/
 #logo img {
@@ -93,97 +139,111 @@ a:hover{
 	top: 0px;
 	left: 0px;
 	height: 165px;
-    width: auto;
+	width: auto;
 }
 
 #titolo {
-	z-index: 100;
-	position: absolute;
-	top: 200px;
-	text-align: center;
-	left: 80%;
-    font-family:"QualiteDeluxePlatinium", sans-serif;
-    font-size:50px;
+	/*width:920; */
+	padding: 10px;
+	clear: both;
+	background: #e2e2e0;
+	margin-left: auto;
+	font-family: "Californian FB";
+	font-size: 150%;
 }
 
-#mes-full{
-	/*width:920; */
-	padding:20px;
-	clear:both;
+#mes-full {
+	/*width:920px;*/
+	padding: 60px;
+	clear: both;
 	background: #e2e2e0;
-	margin-left: 130px;
+	margin-left: 5%;
+	margin-right: 5%;
+	font-family: "Californian FB";
+	font-size: 110%;
 }
+
+/*diminuisce dimensione foto*/
+div.box {
+	width: 300px;
+	padding: auto;
+}
+.box > img {
+	width: 150%;
+	height: auto;
+	margin-right: 10%;
+}
+/*fine dimisuisci dim foto*/
 
 .items-evi {
-    margin-top: 5px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
+	margin-top: 5px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
 }
 
 .item-evi {
-    width:280px;
-	padding:20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    flex-wrap: wrap;
+	width: 280px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	flex-wrap: wrap;
 }
 
 /*** Contenuto ***/
 #content {
-	margin-top: 20px;
-    width:650px;
-    padding:20px;
-    float:left;
+	width: 650px;
+	padding: 20px;
+	float: left;
 }
 
 #content a:visited {
-    text-decoration: none;
-    color: #666;
+	text-decoration: none;
+	color: #666;
 }
 
 #content a:hover {
-    text-decoration: none;
-    color: #21aabd;
+	text-decoration: none;
+	color: #21aabd;
 }
 
 #content a:active {
-    text-decoration: none;
+	text-decoration: none;
 }
 
-#content .articolo{
-    border-bottom:1px solid #eee;
-    min-height:190px;
-    padding:0px 0 10px 0;
+#content .articolo {
+	border-bottom: 1px solid #eee;
+	min-height: 190px;
+	padding: 0px 0 10px 0;
 }
 
-#content .articolo img{
-    width:22%;
-    float:left;
-    margin: 0 20px 0 0;
+#content .articolo img {
+	width: 22%;
+	float: left;
+	margin: 0 20px 0 0;
 }
 
-#content .last{
-    border-bottom:none;
+#content .last {
+	border-bottom: none;
 }
 
 /*** Sidebar ***/
-#sidebar{
-    margin-top: 20px;
-    margin-right: 20px;
-    border: 2px solid #666;
-    width:260px;
-    padding:20px;
-    float:right;
+#sidebar {
+	margin-top: 20px;
+	margin-right: 20px;
+	border: 2px solid #666;
+	width: 260px;
+	padding: 20px;
+	float: right;
 }
 
-#footer{
-    /* width:920px; */
-    padding:20px;
-    font-size: 10px;
-    clear:both;
-    background: #666;
-    color:#fff
+#footer {
+	/* width:920px; */
+	padding: 20px;
+	font-size: 10px;
+	clear: both;
+	background: #666;
+	color: #fff
 }
