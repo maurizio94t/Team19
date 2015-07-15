@@ -26,6 +26,18 @@ include_once ('configDB.php');
 			<div id="content">
 
 				<?php
+				
+				function ridimensionaDescrizione($text) {
+                     $array_text = explode(" ", $text);
+                     $new_array = array();
+                     for ($i=0; $i < 55; $i++) { 
+                         $new_array[$i] = $array_text[$i];
+                     }
+                     $text = implode(" ", $new_array);
+                     return $text." ...";
+				}
+                
+				
                 mysql_connect(DATA_HOST, DATA_UTENTE, DATA_PASS) or die(mysql_error());
                 mysql_select_db(DATA_DB) or die(mysql_error());
 
@@ -43,11 +55,12 @@ include_once ('configDB.php');
                         } else {
                             $class_name = "articolo";
                         }
+                        $Descrizione = ridimensionaDescrizione($row['Descrizione']);
                         echo "<a href='puntodiinteresse.php?Cod=" . $row['Cod'] . "'>
                         <div class='" . $class_name . "'>
                         <img src='img/" . $row['Img'] . "' />
-                        <h2>" . $row['Nome'] . "</h2>
-                        <p>" . $row['Descrizione'] . "</p>
+                        <h2>" . convertStr($row['Nome']) . "</h2>
+                        <p>" . convertStr($Descrizione) . "</p>
                         </div></a>";
                     }
                 } else

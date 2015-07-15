@@ -20,7 +20,7 @@ h1, h2 {
 }
 
 a {
-	color: #21aabd;
+	color: #9BA500;
 	text-decoration: none;
 }
 
@@ -119,7 +119,7 @@ a:hover {
 .bordo img {
 	background-repeat: repeat-x;
 	position: absolute;
-	top: 437px;
+	top: 442px;
 	text-align: left;
 	left: 0%;
 	width: 100%;

@@ -10,14 +10,14 @@ function navH($num) {
         echo '<a href="../home.php">Home</a>';
     }
     if($num==2) {
-        echo '<a class="selected" href="../Attrazioni.php">Punti di interesse</a>';
+        echo '<a class="selected" href="../attrazioni.php">Punti di interesse</a>';
     }else{
-        echo '<a href="../Attrazioni.php">Punti di interesse</a>';
+        echo '<a href="../attrazioni.php">Punti di interesse</a>';
     }
     if($num==3) {
-        echo '<a class="selected" href="../accedi.php">Accedi</a>';
+        echo '<a class="selected" href="area_riservata.php">Area Riservata</a>';
     }else{
-        echo '<a href="../accedi.php">Accedi</a>';
+        echo '<a href="area_riservata.php">Area Riservata</a>';
     }
     if($num==4) {
         echo '<a class="selected" href="../#">Contact</a>';
@@ -81,5 +81,10 @@ function footerH() {
 </div>
 
 <?php
+}
+
+function convertStr($str) {
+    //string iconv ( string $in_charset , string $out_charset , string $str )
+    return iconv('cp1252', 'UTF-8', $str);  //CP1252 (Western Europe)
 }
 ?>

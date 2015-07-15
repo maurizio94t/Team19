@@ -25,20 +25,19 @@ include_once ('configDB.php');
 
 		<div id="container">
 			<?php navH(2); ?>
-
 			<?php logoH(); ?>
 
 			<div id="titolo">
 				<?php
-				//TITOLO
-				$Cod=$_GET["Cod"];//codice per Testo descrizione
+				
+				$Cod=$_GET["Cod"];
                 $query="SELECT Nome,Descrizione,Img FROM PuntiDiInteresse WHERE Cod='$Cod'";
                 $res=mysql_query($query);
                 if($res&&mysql_num_rows($res)>0) {
                     while($row=mysql_fetch_assoc($res)) {
-                        $Nome = $row['Nome'];
+                        $Nome = convertStr($row['Nome']);
                         $Img = "<div class='box'> <img src='img/" . $row['Img'] . "' alt='Errore: immagine non trovata!' style='float:left;'/> </div>";
-                        $Descrizione = $row['Descrizione'];
+                        $Descrizione = convertStr($row['Descrizione']);
                     }
                 } else
                     $Nome = "nessun risultato";
@@ -55,21 +54,24 @@ include_once ('configDB.php');
 				
 				<!--inizio mappa-->
 				<script type="text/javascript">
-        
-        function initialize(){
-            <?php
-                $query="SELECT Latitudine,Longitudine FROM PuntiDiInteresse WHERE Cod='$Cod'";
-                $res=mysql_query($query);
-                if($res&&mysql_num_rows($res)>0) {
-                    while($row=mysql_fetch_assoc($res)) {
-                        $Lati = $row['Latitudine'];
-                        $Long = $row['Longitudine'];
-                    }
+        <?php
+            $query="SELECT Latitudine,Longitudine FROM PuntiDiInteresse WHERE Cod='$Cod'";
+            $res=mysql_query($query);
+            if($res&&mysql_num_rows($res)>0) {
+                while($row=mysql_fetch_assoc($res)) {
+                    $Lati = $row['Latitudine'];
+                    $Long = $row['Longitudine'];
                 }
-            ?>
+            }
+        ?>
+        function initialize(){
+            
             var latlng = new google.maps.LatLng(<?php echo $Lati; ?>,<?php echo $Long; ?>);
             var myOptions= {
-                zoom:14,center:latlng,mapTypeId:google.maps.MapTypeId.HYBRID,mapTypeControlOptions: {
+                zoom:12,
+                center:latlng,
+                mapTypeId:google.maps.MapTypeId.ROADMAP,
+                mapTypeControlOptions: {
                     style:google.maps.MapTypeControlStyle.HORIZONTAL_BAR
                 }
             }
@@ -81,26 +83,45 @@ include_once ('configDB.php');
                 position:myLatlng,map:mymap,
             });
         }
+        google.maps.event.addDomListener(window, 'load', initialize);
+        //-------FINE MAPPA-------
+        
+        function controllaData() {
+            var dataI = document.getElementById("dataI").value;
+            var dataF = document.getElementById("dataF").value;
+            var dataIS = dataI.toString();
+            var dataIF = dataF.toString();
+            
+            var info_msg = document.getElementById("info_msg");
+            
+            if(dataIS>dataIF){
+                info_msg.innerHTML="Errore inserimento data!";
+            } else {
+                info_msg.innerHTML="Prenotazione in corso...";
+            }
+        }
+        
         </script>
-        <!--fine mappa-->
 				
 				<h5>Prenota subito!</h5>
 				<h6>
 				<form name="formData">
 					<p>
 						<b>Data iniziale:</b>
-						<input type="Text" name="data1" value="">
+						<input type=date id="dataI" name="dataI">
 					</p>
 					<p>
 						<b>Data finale:&nbsp;&nbsp;</b>
-						<input type="Text" name="data2" value="">
+						<input type=date id="dataF" name="dataF">
 					</p>
 				</form>
 				<form action="prenotazione.php">
-					<input type="button" value="Invia la prenotazione" name="button">
-				</h6>
+				    <input type=button id="tasto" name="tasto" value="Prenota!" onClick="controllaData();">
+				    <p id="info_msg"></p>
+				
 				</form>
-
+				</h6>
+				
 				<div id="map" style="margin-left:auto; margin-right:10px; width:400px; height:400px; border:1px solid black; margin-top: 5%;"></div>
 			</div>
 

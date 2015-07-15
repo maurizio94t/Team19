@@ -14,7 +14,7 @@ h1, h2 {
 }
 
 a {
-	color: #21aabd;
+	color: #9BA500;
 	text-decoration: none;
 }
 
@@ -27,6 +27,10 @@ a:hover {
 	/* width: 960px; */
 	margin: 0 auto;
 	background: #fff
+}
+
+#navigation {
+	margin-top: -10px;
 }
 
 #header {
@@ -110,6 +114,48 @@ a:hover {
 	padding: 57px;
 	clear: both;
 	background: #e2e2e0;
+}
+
+span {
+	font-size: 20px;
+}
+#main-body {
+	padding-left: 20px;
+}
+#middle {
+	padding: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#middle #tabPrenotazioniPunti table, td, th {
+	padding-left: 5px;
+	padding-right: 5px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    table-layout:auto;
+}
+
+#middle #tabPrenotazioniPunti th {
+    background-color: #2F2400;
+    color: white;
+    
+}
+
+#middle #tabPrenotazioniPunti tr {
+    background-color: #9BA500;
+    color: white;
+}
+
+#middle img {
+	vertical-align: center;
+	margin: 0 auto;
+	width: 20px;
+	height: auto;
+}
+
+#middle .newPt table {
+	border: 0px;
 }
 
 #footer {

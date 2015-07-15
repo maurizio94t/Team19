@@ -28,23 +28,7 @@ include_once ('tema.php');
 	<body>
 
 		<div id="container">
-
 			<?php navH(1); ?>
-
-			<!--
-			<div id="autenticazione" align="right">
-			<form method="POST" action="php_login/autenticazione.php" id="form_autenticazione" name="autenticazione">
-			<label>Username/email</label>
-			<input type="text" name="email_o_nome_utente" />
-			<label>Password</label>
-			<input type="password" name="password" id="password" />
-			<input type="submit" name="invio_dati" value="Invia"/>
-			<br/>
-			<label><a href="php_login/iscrizione.php" title="Registrazione">Se non sei registrato puoi farlo adesso</a></label>
-			</form>
-			</div>
-			-->
-
 			<div class="slider-wrapper theme-default">
 				<div id="slider" class="nivoSlider">
 					<img src="img/puglia1modified.png" alt="" />

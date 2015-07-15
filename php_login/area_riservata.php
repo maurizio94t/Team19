@@ -15,7 +15,8 @@ $id_utente = $_SESSION['id_utente'];
 # chiamata al metodo per la verifica della sessione
 if (!$obj -> verifica_sessione()) {
     #redirect in caso di sessione non verificata
-    @header("location:autenticazione.php");
+    //@header("location:autenticazione.php");
+    @header("location:../accedi.php");
 }
 
 # controllo sul valore di input per il logout
@@ -23,7 +24,7 @@ if (isset($_GET['val']) && ($_GET['val'] == 'fine_sessione')) {
     # chiamata al metodo per il logout
     $obj -> esci();
     # redirezione alla pagina di login
-    @header("location:autenticazione.php");
+    @header("location:../accedi.php");
 }
 
 # Area riservata
@@ -48,24 +49,19 @@ if (isset($_GET['val']) && ($_GET['val'] == 'fine_sessione')) {
             </div>
             
             <div id="navigation">
-                <a href="<?php echo $_SERVER['PHP_SELF']; ?>?val=fine_sessione" title="Logout">
-                    <p align="right"/>Esci</p>
-                </a>
+                <p align="right"/>
+                    <a href="<?php echo "area_riservata.php"; ?>?val=fine_sessione" title="Logout">Esci</a>
+                </p>
             </div>
             <div id="main-body">
                 <h1>Benvenuto nell'area riservata <?php $obj -> mostra_utente($id_utente); ?></h1>
             </div>
             <div id="middle">
-                <span>Visualizza Prenotazioni</span> <br/>
-                <span>Cancella Prenotazione</span> <br/>
-                <span>Aggiugni Punto di Interesse</span> <br/>
-                
-                <?php
-                    $str = "Gaaaaaayyy";
-                    if ($id_utente == 1) {
-                        echo $str;
-                    }
-                ?>
+                <span><a href="prenotazioni.php">Visualizza e Cancella Prenotazioni</a></span> <br/>
+                <span><a href="punti.php">Visualizza e Cancella Punti di Interesse</a></span> <br/>
+                <span><a href="newPunto.php">Aggiugni Nuovo Punto di Interesse</a></span> <br/>
+                <span><a href="utenti.php">Visualizza e Cancella Personale</a></span> <br/>
+                <span><a href="">Aggiugni Personale</a></span> <br/>
             </div>
             <?php footerH(); ?>
         </div>

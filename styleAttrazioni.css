@@ -199,6 +199,11 @@ div.box {
 	float: left;
 }
 
+#content a:link {
+	text-decoration: none;
+	color: #666;
+}
+
 #content a:visited {
 	text-decoration: none;
 	color: #666;
@@ -207,10 +212,6 @@ div.box {
 #content a:hover {
 	text-decoration: none;
 	color: #21aabd;
-}
-
-#content a:active {
-	text-decoration: none;
 }
 
 #content .articolo {

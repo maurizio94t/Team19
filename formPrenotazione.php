@@ -268,7 +268,8 @@ include_once ('tema.php');
 					<br>
 				</fieldset>
 				<button tabindex="17" type="submit" name="send" id="send"/>
-				Invia</button>
+				    Invia
+			    </button>
 				</form>
 	</body>
 </html>
