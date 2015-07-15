@@ -25,7 +25,6 @@ include_once ('tema.php');
 			<input type="password" name="password" id="password" />
 			<input type="submit" name="invio_dati" value="Invia"/>
 			<br/>
-			<label><a href="php_login/iscrizione.php" title="Registrazione">Se non sei registrato puoi farlo adesso</a></label>
 			</form>
 			</div>
 			

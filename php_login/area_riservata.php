@@ -61,7 +61,7 @@ if (isset($_GET['val']) && ($_GET['val'] == 'fine_sessione')) {
                 <span><a href="punti.php">Visualizza e Cancella Punti di Interesse</a></span> <br/>
                 <span><a href="newPunto.php">Aggiugni Nuovo Punto di Interesse</a></span> <br/>
                 <span><a href="utenti.php">Visualizza e Cancella Personale</a></span> <br/>
-                <span><a href="">Aggiugni Personale</a></span> <br/>
+                <span><a href="newUtente.php">Aggiugni Personale</a></span> <br/>
             </div>
             <?php footerH(); ?>
         </div>

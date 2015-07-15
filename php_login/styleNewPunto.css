@@ -96,7 +96,6 @@ a:hover {
 	width: auto;
 }
 
-
 #mes-full {
 	/*width:920; */
 	padding: 57px;
@@ -114,36 +113,6 @@ span {
 	padding: 20px;
 	margin-top: 10px;
 	margin-bottom: 10px;
-}
-
-#middle #tabPrenotazioniPunti table, td, th {
-	padding-left: 5px;
-	padding-right: 5px;
-    border: 1px solid black;
-    border-collapse: collapse;
-    table-layout:auto;
-}
-
-#middle #tabPrenotazioniPunti th {
-    background-color: #2F2400;
-    color: white;
-    
-}
-
-#middle #tabPrenotazioniPunti tr {
-    background-color: #9BA500;
-    color: white;
-}
-
-#middle img {
-	vertical-align: center;
-	margin: 0 auto;
-	width: 20px;
-	height: auto;
-}
-
-#middle .newPt table {
-	border: 0px;
 }
 
 #footer {

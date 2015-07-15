@@ -36,8 +36,7 @@ if (isset($_GET['val']) && ($_GET['val'] == 'fine_sessione')) {
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>ApuliaGo</title>
 
-        <link rel="stylesheet" href="styleAreaRiservata.css">
-        
+        <link rel="stylesheet" href="styleNewPunto.css">
         <title>Area riservata</title>
         <?php navH(3); ?>
         <?php logoH(); ?>
@@ -54,30 +53,33 @@ if (isset($_GET['val']) && ($_GET['val'] == 'fine_sessione')) {
                 </p>
             </div>
             <div id="main-body">
-                <h1>Benvenuto nell'area riservata <?php $obj -> mostra_utente($id_utente); ?>
-</h1>
+                <h1>Benvenuto nell'area riservata <?php $obj -> mostra_utente($id_utente); ?> </h1>
             </div>
             <div id="middle">
                 <div class="newPt">
                 <form action="" method="post" enctype="multipart/form-data" name="form1">
                     <!-- CASELLE DI TESTO -->
-                    Codice<br>
-                    <input type="text" name="codice"><br>
                     Nome<br>
                     <input type="text" name="nome"><br>
                     Descrizione punto di interesse<br>
                     <input type="text" name="descrizione"><br><br>
                     Foto <input name="userimage" type="file">
-                    <input type="submit" name="send" value="Inserisci Foto"></td>
                     <br>
                     Tipologia<br>
-                    <select name="tipologia">
+                    <select name="categoria">
                         <option value="CB">Cibi</option>
                         <option value="ESP">Esplorazione</option>
                         <option value="SV">Svago</option>
-                    </select><br><br><br>
+                    </select><br>
+                    Latitudine (es: 40.857374)<br>
+                    <input type="text" name="latitudine"><br>
+                    Longitudine (es: 40.857374)<br>
+                    <input type="text" name="longitudine"><br>
+                    Prezzo (es: 49.90)<br>
+                    <input type="text" name="prezzo">
+                    <br><br><br>
                     <!-- SUBMIT -->
-                    <input type="submit" name="invia" value="Invia i dati"">
+                    <input type="submit" name="send" value="Invia Dati"></td>
                        
                 </form>
                 </div>
@@ -106,7 +108,7 @@ if (isset($_GET['val']) && ($_GET['val'] == 'fine_sessione')) {
                 // Controllo il submit del form HTML...
                 if (isset($_POST['send'])) {
                     $file = $_FILES['userimage']['name'];
-
+                    
                     // Controllo il tipo di file...
                     if (in_array(array_pop(explode('.', $file)), $estensioni)) {
 
@@ -115,7 +117,7 @@ if (isset($_GET['val']) && ($_GET['val'] == 'fine_sessione')) {
                         if ($dimensione_file > $dimensione_max) {
                             print $tooBig;
                         } else {
-                            doUpload($file, $upload_dir);
+                            $newname = doUpload($file, $upload_dir);
                         }
 
                     } else {
@@ -134,7 +136,6 @@ if (isset($_GET['val']) && ($_GET['val'] == 'fine_sessione')) {
 
                     if (is_uploaded_file($nomefile)) {
                         $newname = ($nomereale);
-
                         $ext = end(explode('.', $nomereale));
                         $filename = explode('.', $nomereale);
                         if (file_exists($upload_dir . '/' . $nomereale)) {
@@ -145,9 +146,10 @@ if (isset($_GET['val']) && ($_GET['val'] == 'fine_sessione')) {
                         }
 
                         $newname = str_replace(' ', '_', $newname);
-
+                        
                         @move_uploaded_file($nomefile, ($upload_dir . '/' . $newname));
                         print $thatsAll;
+                        return $newname;
                     } else
                         print $wrongUp;
 
@@ -155,9 +157,20 @@ if (isset($_GET['val']) && ($_GET['val'] == 'fine_sessione')) {
 
                 mysql_connect(DATA_HOST, DATA_UTENTE, DATA_PASS) or die(mysql_error());
                 mysql_select_db(DATA_DB) or die(mysql_error());
-
-                $query = "SELECT * FROM PuntiDiInteresse";
-                $result = mysql_query($query);
+                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                    $nome = $_POST['nome'];
+                    $descr = $_POST['descrizione'];
+                    $img = "imgAttrazioni/" . $newname;
+                    $cat = $_POST['categoria'];
+                    $lat = $_POST['latitudine'];
+                    $long = $_POST['longitudine'];
+                    $prz = $_POST['prezzo'];
+                    
+                    $query = "INSERT INTO PuntiDiInteresse (Nome, Descrizione, Img, Categoria, Latitudine, Longitudine, Prezzo) VALUES ('$nome', '$descr', '$img', '$cat', '$lat', '$long', '$prz')";
+                    $result = mysql_query($query);
+                    echo "<br>Punto di interesse inserito!";
+                }
+                
             ?>
 </div>
 <?php footerH(); ?>

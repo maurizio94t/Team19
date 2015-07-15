@@ -61,7 +61,7 @@ if (isset($_GET['val']) && ($_GET['val'] == 'fine_sessione')) {
                 function cancella(Cod) {
                     var sei_sicuro = confirm('Sei sicuro di voler cancellare l\'utente con id: ' + Cod + '?');
                     if (sei_sicuro) {
-                        window.location.replace("punti.php?Cod="+Cod);
+                        window.location.replace("utenti.php?Cod="+Cod);
                     }else{
                         alert('Cancellazione NON eseguita..');
                     }
