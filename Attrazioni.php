@@ -73,16 +73,16 @@ include_once ('configDB.php');
 				<h2>I pi&ugrave; cliccati:</h2>
 				<ul>
 					<li>
-						<a href="#">Trulli di Alberobello</a>
+						<a href="puntodiinteresse.php?Cod=10">Tour in Bici</a>
 					</li>
 					<li>
-						<a href="#">Putignano</a>
+						<a href="puntodiinteresse.php?Cod=3">Grotte di Castellana</a>
 					</li>
 					<li>
-						<a href="#">Grotte di Castellana</a>
+						<a href="puntodiinteresse.php?Cod=9">Tour in Barca</a>
 					</li>
 					<li>
-						<a href="#">CampannelloTown</a>
+						<a href="puntodiinteresse.php?Cod=5">Castel Del Monte</a>
 					</li>
 				</ul>
 			</div>
