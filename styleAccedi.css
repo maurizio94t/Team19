@@ -1,20 +1,31 @@
+@font-face {
+	font-family: 'QualiteDeluxePlatinium';
+	src: url('fonts/QualiteDeluxePlatinium.eot');
+	src: local('QualiteDeluxePlatinium'), url('fonts/QualiteDeluxePlatinium.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Ubuntu-R';
+	src: url('fonts/Ubuntu-R.eot');
+	src: local('Ubuntu-R'), url('fonts/Ubuntu-R.ttf') format('truetype');
+}
+
 body {
 	margin: 0;
 	padding: 0;
-	background: #e2e2e0;
+	background: #FFFFFF;
 	color: #666;
 	font: 16px/28px;
-	font-family: "Courier", sans-serif;
+	font-family: "Ubuntu-R", sans-serif;
 	line-height: 22px;
 }
 
 h1, h2 {
-	/* text-transform:uppercase; */
 	font-weight: normal;
 }
 
 a {
-	color: #21aabd;
+	color: #9BA500;
 	text-decoration: none;
 }
 
@@ -24,17 +35,15 @@ a:hover {
 }
 
 #container {
-	/* width: 960px; */
 	margin: 0px auto;
-	background: #e2e2e0;
+	background: #FFFFFF;
 }
 
 #header {
 	width: 520px;
 	height: 160px;
 	padding: 80px;
-	background: #21aabd; /* colore di prima: bianco */
-	/* line-height:160px;      stessa dimensione del contenitore per centrare tutto in verticale */
+	background: #9BA500;
 }
 
 /*** Nav ***/
@@ -43,14 +52,12 @@ a:hover {
 }
 
 #nav {
-	/* width:960px; */
 	margin-left: 126px;
 	background: #2F2400;
 	color: #fff;
 }
 
 #nav .selected {
-	/* width:960px; */
 	background: #9BA500;
 	color: #fff;
 }
@@ -61,7 +68,6 @@ a:hover {
 	display: inline-block;
 	text-decoration: none;
 	text-transform: uppercase;
-	/*** font-family:oswald; ***/
 }
 
 #nav a:hover {
@@ -77,11 +83,228 @@ a:hover {
 	width: auto;
 }
 
-#footer {
-	/* width:920px; */
-	padding: 20px;
-	font-size: 10px;
-	clear: both;
-	background: #666;
-	color: #fff
+/* Inizio form Login */
+#access-form {
+	max-width: 400px;
+	height: 300px;
+	padding-top: 100px;
+	margin: 0 auto;
 }
+
+#access, label, input[name="submit"] {
+	position: relative;
+}
+
+label > span, input, textarea, button {
+	box-sizing: border-box;
+}
+
+label {
+	display: block;
+}
+
+label > span {
+	display: none;
+}
+
+input, textarea, button {
+	width: 100%;
+	padding: 0.5em;
+	border: none;
+	font: 300 100%/1.2 Ubuntu, sans-serif;
+}
+
+input[type="text"], input[type="password"], textarea {
+	margin: 0 0 1em;
+	border: 1px solid #ccc;
+	outline: none;
+}
+
+input[type="submit"], button {
+	margin-top: 15px;
+	background: #a7cd80;
+	color: #333;
+}
+
+input[type="submit"]:hover, button:hover {
+	background: #91b36f;
+}
+/* Fine form Login */
+
+section{
+	background: #FFFFFF;
+	width: auto;
+}
+
+article{
+	background: #FFFFFF;
+	float: left;
+	margin-top: 10%;
+	margin-left: 40px; 
+}
+
+.aboutStrip {
+	background: #FFFFFF;
+	width: auto;
+	height: 700px;
+}
+
+.aboutStrip .profiles {
+	background: #FFFFFF;
+	border-bottom: 0px solid rgba(144, 144, 144, 0.25);
+	border-top: 10px solid rgba(144, 144, 144, 0.25);
+	padding-top: 4em;
+}
+
+.aboutStrip .profile {
+	background: #FFFFFF;
+	text-align: left;
+	width: auto;
+	width: 30%;
+}
+
+.aboutStrip .description {
+	margin top: 10px;
+	padding: 50px;
+	width: auto;
+	text-align: center;
+}
+
+.aboutStrip .profile img {
+	border-radius: 50%;
+	float: left;
+	margin-bottom: 1em;
+	margin-right: 1em;
+	width: 25%
+}
+
+.aboutStrip .description h1 {
+	color: #FFFFFF
+}
+
+.aboutStrip .profile h4 {
+	color: #FFFFFF
+}
+
+.footer-distributed {
+	background-color: #292c2f;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	font-family: "Ubuntu-R", sans-serif;
+	padding: 55px 50px;
+	margin-top: 0px;
+}
+
+.footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left {
+	width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3 {
+	color: #ffffff;
+	font-family: "QualiteDeluxePlatinium", sans-serif;
+	font-size: 80px;
+	margin: 0;
+}
+
+.footer-distributed h3 span {
+	font-size: 80px;
+	color: #9BA500;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+	color: #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a {
+	display: inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+	color: #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+	width: 35%;
+}
+
+.footer-distributed .footer-center i {
+	background-color: #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+	display: block;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+	color: #9BA500;
+	text-decoration: none;;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about {
+	line-height: 20px;
+	color: #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+	display: block;
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;

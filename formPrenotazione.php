@@ -10,9 +10,23 @@ include_once ('tema.php');
 		<title>Punti di interesse</title>
 
 		<link rel="stylesheet" href="styleAttrazioni.css">
-
+		<script language="javascript" type="text/javascript">
+		function getValue() {
+		    var query = window.location.search.substr(1);
+            var par = query.split('&'); 
+            var c=0; var val = new Array();
+            while(par.length > c) {
+                val[c] = par[c].split('=');
+                c++;
+            }
+             document.getElementById("Cod").value = val[0][1];
+             document.getElementById("dataI").value = val[1][1];
+             document.getElementById("dataF").value = val[2][1];
+             document.getElementById("persone").value = val[3][1];
+		}
+     </script>
 	</head>
-	<body>
+	<body OnLoad="getValue()">
 		<div id="container">
 			<?php navH(0); ?>
 
@@ -30,7 +44,6 @@ include_once ('tema.php');
 					</legend>
 
 					<form action="generateReport.php" method="post" name="contactform" id="contact">
-
 						<label for="nome">Nome</label><a name="nome"></a>
 						<input tabindex="1" type="text" name="nome" id="nome" value="" required/>
 
@@ -266,6 +279,10 @@ include_once ('tema.php');
 					<label for="titolareC">Nome e Cognome intestatario carta</label><a name="titolareC"></a>
 					<input tabindex="16" type="text" name="titolareC" id="titolareC" value="" required/>
 					<br>
+					<input type="hidden" id="Cod" name="Cod" value="" />
+                    <input type="hidden" id="dataI" name="dataI" value="" />
+                    <input type="hidden" id="dataF" name="dataF" value="" />
+                    <input type="hidden" id="persone" name="persone" value="" />
 				</fieldset>
 				<button tabindex="17" type="submit" name="send" id="send"/>
 				    Invia

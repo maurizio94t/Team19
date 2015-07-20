@@ -1,28 +1,21 @@
 <?php
-# inclusione del file di funzione
 @include_once 'functions.php';
-# istanza della classe
+
 $obj = new Iscrizioni();
-# chiamata al metodo per la verifica della sessione
-if ($obj->verifica_sessione())
-{
-  #redirect in caso di esito negativo
+
+if ($obj->verifica_sessione()) {
   @header("location:area_riservata.php");
 }
-# chiamata al metodo per la registrazione
-if ($_SERVER["REQUEST_METHOD"] == "POST") 
-{
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $registrato = $obj->registra(htmlentities($_POST['nome_reale'], ENT_QUOTES), htmlentities($_POST['nome_utente'], ENT_QUOTES), htmlentities($_POST['password'], ENT_QUOTES), htmlentities($_POST['email'], ENT_QUOTES));
-  # controllo sull'esito del metodo
+  
   if ($registrato) {
-    # notifica in caso di esito positivo
     echo 'Registrazione conclusa <a href="../home.php">ora puoi loggarti</a>.';
   }else{
-    # notifica in caso di esito negativo
     echo '<font color="red">Il form non &egrave; stato compilato correttamente oppure stai cercando di registrarti con dei dati gi&agrave; presenti nel database.</font>';
   }
 }
-# form per l'iscrizione
 ?>
 <!DOCTYPE HTML">
 <html>

@@ -1,13 +1,13 @@
 @font-face {
 	font-family: 'QualiteDeluxePlatinium';
-	src: url('../fonts/QualiteDeluxePlatinium.eot');
-	src: local('QualiteDeluxePlatinium'), url('../fonts/QualiteDeluxePlatinium.ttf') format('truetype');
+	src: url('fonts/QualiteDeluxePlatinium.eot');
+	src: local('QualiteDeluxePlatinium'), url('fonts/QualiteDeluxePlatinium.ttf') format('truetype');
 }
 
 @font-face {
 	font-family: 'Ubuntu-R';
-	src: url('../fonts/Ubuntu-R.eot');
-	src: local('Ubuntu-R'), url('../fonts/Ubuntu-R.ttf') format('truetype');
+	src: url('fonts/Ubuntu-R.eot');
+	src: local('Ubuntu-R'), url('fonts/Ubuntu-R.ttf') format('truetype');
 }
 
 body {
@@ -20,12 +20,14 @@ body {
 	line-height: 22px;
 }
 
+
+
 h1, h2 {
 	font-weight: normal;
 }
 
 a {
-	color: #9BA500;
+	color: #21aabd;
 	text-decoration: none;
 }
 
@@ -34,13 +36,10 @@ a:hover {
 	text-decoration: underline;
 }
 
+
 #container {
 	margin: 0 auto;
-	background: #fff
-}
-
-#navigation {
-	margin-top: -10px;
+	background: #e2e2e0;
 }
 
 #header {
@@ -91,6 +90,7 @@ a:hover {
 	background: #333;
 }
 
+
 #logo img {
 	z-index: 100;
 	position: absolute;
@@ -100,113 +100,115 @@ a:hover {
 	width: auto;
 }
 
-
-#mes-full {
-	padding: 40px;
-	clear: both;
-	background: #FFFFFF;
-}
-
-span {
-	font-size: 20px;
-}
-
-#main-body {
-	padding-left: 20px;
-}
-
-#middle {
-	padding: 20px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-
-#middle #tabPrenotazioniPunti table, td, th {
-	padding-left: 5px;
-	padding-right: 5px;
-    border: 1px solid black;
-    border-collapse: collapse;
-    table-layout:auto;
-}
-
-#middle #tabPrenotazioniPunti th {
-    background-color: #2F2400;
-    color: white;
-    
-}
-
-#middle #tabPrenotazioniPunti tr {
-    background-color: #9BA500;
-    color: white;
-}
-
-#middle img {
-	vertical-align: center;
+#contact-form {
+	max-width: 1208px;
+	max-width: 75.5 rem;
 	margin: 0 auto;
-	width: 20px;
-	height: auto;
 }
 
-#middle .newPt table {
-	border: 0px;
+#contact, label, input[name="submit"] {
+	position: relative;
+}
+label > span, input, textarea, button {
+	box-sizing: border-box;
+}
+label {
+	display: block;
+}
+label > span {
+	display: none;
+}
+input, textarea, button {
+	width: 100%;
+	padding: 0.5em;
+	border: none;
+	font: 300 100%/1.2 Ubuntu, sans-serif;
+}
+input[type="text"], input[type="email"], textarea {
+	margin: 0 0 1em;
+	border: 1px solid #ccc;
+	outline: none;
+}
+input.invalid, textarea.invalid {
+	border-color: #d5144d;
+}
+textarea {
+	height: 6em;
+}
+input[type="submit"], button {
+	background: #a7cd80;
+	color: #333;
+}
+input[type="submit"]:hover, button:hover {
+	background: #91b36f;
+}
+
+@media screen and (min-width: 30em) {
+	#contact-form h2 {
+		margin-left: 26.3736%;
+		font-size: 2em;
+		line-height: 1.5;
+	}
+	label > span {
+		vertical-align: top;
+		display: inline-block;
+		width: 26.3736%;
+		padding: 0.5em;
+		border: 1px solid transparent;
+		text-align: right;
+	}
+	input, textarea, button {
+		width: 73.6263%;
+		line-height: 1.5;
+	}
+	textarea {
+		height: 10em;
+	}
+	input[type="submit"], button {
+		margin-left: 26.3736%;
+	}
+}
+
+@media screen and (min-width: 48em) {
+	#contact-form {
+		text-align: justify;
+		line-height: 0;
+	}
+	#contact-form:after {
+		content: '';
+		display: inline-block;
+		width: 100%;
+	}
+	#contact-form h2 {
+		margin-left: 17.2661%;
+	}
+	#contact-form form, #contact-form aside {
+		vertical-align: top;
+		display: inline-block;
+		width: 65.4676%;
+		text-align: left;
+		line-height: 1.5;
+	}
+	#contact-form aside {
+		width: 30.9353%;
+	}
 }
 
 section {
 	background: #e2e2e0;
+	float: center;
 	width: auto;
+	margin-top: -1.5%;
+	margin-bottom: 20px;
+	margin-left: 40px;
 }
 
-article {
-	background: #e2e2e0;
-	float: left;
-	margin-top: 10%;
-	margin-left: 40px; 
+article{
+	background: #FFFFFF;
 }
 
-.aboutStrip {
-background: #e2e2e0;
-width: auto;
-height: 700px;
-
-
-}
-
-.aboutStrip .profiles {
-	background: #e2e2e0;
-	border-bottom: 0px solid rgba(144, 144, 144, 0.25);
-	border-top: 10px solid rgba(144, 144, 144, 0.25);
-	
-	padding-top: 4em;
-}
-
-.aboutStrip .profile {
-	background: #e2e2e0;
-	text-align: left;
-	width: auto;
-	width: 30%;
-}
-
-.aboutStrip .description {
-margin top: 10px;
-padding: 50px;
-	width: auto;
-	text-align: center;
-}
-
-.aboutStrip .profile img {
-	border-radius: 50%;
-	float: left;
-	margin-bottom: 1em;
-	margin-right: 1em;
-	width: 25%
-}
-
-.aboutStrip .description h1 {
-	color: #FFFFFF
-}
-
-.aboutStrip .profile h4 {
-	color: #FFFFFF
+#description{
+	padding-left :105px;
 }
 
 .footer-distributed {
@@ -218,7 +220,7 @@ padding: 50px;
 	font: bold 16px sans-serif;
 	font-family: "Ubuntu-R", sans-serif;
 	padding: 55px 50px;
-	margin-top: 0px;
+	margin-top: 80px;
 }
 
 .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
@@ -227,11 +229,13 @@ padding: 50px;
 }
 
 /* Footer left */
+
 .footer-distributed .footer-left {
 	width: 40%;
 }
 
 /* The company logo */
+
 .footer-distributed h3 {
 	color: #ffffff;
 	font-family: "QualiteDeluxePlatinium", sans-serif;
@@ -240,11 +244,12 @@ padding: 50px;
 }
 
 .footer-distributed h3 span {
-	color: #9BA500;
 	font-size: 80px;
+	color: #9BA500;
 }
 
 /* Footer links */
+
 .footer-distributed .footer-links {
 	color: #ffffff;
 	margin: 20px 0 12px;
@@ -266,6 +271,7 @@ padding: 50px;
 }
 
 /* Footer Center */
+
 .footer-distributed .footer-center {
 	width: 35%;
 }
@@ -303,11 +309,12 @@ padding: 50px;
 }
 
 .footer-distributed .footer-center p a {
-	color: #9BA500;
+	color: #5383d3;
 	text-decoration: none;;
 }
 
 /* Footer Right */
+
 .footer-distributed .footer-right {
 	width: 20%;
 }
@@ -326,3 +333,42 @@ padding: 50px;
 	font-size: 14px;
 	font-weight: bold;
 	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color: #33383b;
+	border-radius: 2px;
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+@media (max-width: 880px) {
+
+	.footer-distributed {
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i {
+		margin-left: 0;
+	}
+
+}

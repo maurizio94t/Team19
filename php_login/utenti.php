@@ -1,33 +1,22 @@
 <?php
 include_once ('../tema_inf.php');
 include_once ('config.php');
-# inizializzazione della sessione
-@session_start();
 
-# inclusione del file di funzione
+@session_start();
 @include_once 'functions.php';
 
-# istanza della classe
 $obj = new Iscrizioni();
 
-# identificativo univoco dell'utente
 $id_utente = $_SESSION['id_utente'];
 
-# chiamata al metodo per la verifica della sessione
 if (!$obj -> verifica_sessione()) {
-    #redirect in caso di sessione non verificata
     @header("location:autenticazione.php");
 }
 
-# controllo sul valore di input per il logout
 if (isset($_GET['val']) && ($_GET['val'] == 'fine_sessione')) {
-    # chiamata al metodo per il logout
     $obj -> esci();
-    # redirezione alla pagina di login
     @header("location:autenticazione.php");
 }
-
-# Area riservata
 ?>
 
 <!DOCTYPE html>
@@ -45,7 +34,6 @@ if (isset($_GET['val']) && ($_GET['val'] == 'fine_sessione')) {
     <body>
         <div id="container">
             <div id="mes-full">
-                <!--Punti di interesse-->
             </div>
             
             <div id="navigation">

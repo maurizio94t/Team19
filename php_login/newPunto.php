@@ -1,33 +1,22 @@
 <?php
 include_once ('../tema_inf.php');
 include_once ('config.php');
-# inizializzazione della sessione
-@session_start();
 
-# inclusione del file di funzione
+@session_start();
 @include_once 'functions.php';
 
-# istanza della classe
 $obj = new Iscrizioni();
 
-# identificativo univoco dell'utente
 $id_utente = $_SESSION['id_utente'];
 
-# chiamata al metodo per la verifica della sessione
 if (!$obj -> verifica_sessione()) {
-    #redirect in caso di sessione non verificata
     @header("location:autenticazione.php");
 }
 
-# controllo sul valore di input per il logout
 if (isset($_GET['val']) && ($_GET['val'] == 'fine_sessione')) {
-    # chiamata al metodo per il logout
     $obj -> esci();
-    # redirezione alla pagina di login
     @header("location:autenticazione.php");
 }
-
-# Area riservata
 ?>
 
 <!DOCTYPE html>
@@ -43,76 +32,53 @@ if (isset($_GET['val']) && ($_GET['val'] == 'fine_sessione')) {
     </head>
     <body>
         <div id="container">
-            <div id="mes-full">
-                <!--Punti di interesse-->
-            </div>
-            
-            <div id="navigation">
-                <p align="right"/>
-                    <a href="<?php echo "area_riservata.php"; ?>?val=fine_sessione" title="Logout">Esci</a>
-                </p>
-            </div>
+            <p align="right"/>
+                <a href="<?php echo "area_riservata.php"; ?>?val=fine_sessione" title="Logout">Esci</a>
+            </p>
             <div id="main-body">
-                <h1>Benvenuto nell'area riservata <?php $obj -> mostra_utente($id_utente); ?> </h1>
+                <h1><center>Aggiungi nuovo Punto di Interesse</center></h1>
             </div>
             <div id="middle">
-                <div class="newPt">
+                <section id="newuser-form">
                 <form action="" method="post" enctype="multipart/form-data" name="form1">
-                    <!-- CASELLE DI TESTO -->
-                    Nome<br>
+                    Nome Punto di Interesse
                     <input type="text" name="nome"><br>
-                    Descrizione punto di interesse<br>
-                    <input type="text" name="descrizione"><br><br>
+                    Descrizione Punto di Interesse
+                    <input type="text" name="descrizione"><br>
                     Foto <input name="userimage" type="file">
-                    <br>
-                    Tipologia<br>
+                    Tipologia
                     <select name="categoria">
                         <option value="CB">Cibi</option>
                         <option value="ESP">Esplorazione</option>
                         <option value="SV">Svago</option>
-                    </select><br>
-                    Latitudine (es: 40.857374)<br>
+                    </select><br><br>
+                    Latitudine (es: 40.857374)
                     <input type="text" name="latitudine"><br>
-                    Longitudine (es: 40.857374)<br>
+                    Longitudine (es: 40.857374)
                     <input type="text" name="longitudine"><br>
-                    Prezzo (es: 49.90)<br>
+                    Prezzo (es: 49.90)
                     <input type="text" name="prezzo">
-                    <br><br><br>
-                    <!-- SUBMIT -->
+                    <br><br>
                     <input type="submit" name="send" value="Invia Dati"></td>
                        
                 </form>
-                </div>
+                </section>
                 
                 <?php
-
-                //Impostazioni varie da modificare a piacimento
                 $dimensione_max = '12600000';
-                // Dimensione massima delle foto
                 $upload_dir = '../img/imgAttrazioni';
-                // Cartella dove posizione le foto
                 $estensioni = array("png", "jpg", "gif");
-                // Tipi di File consentiti
-                $noSubmitSend = 'Nessun upload eseguito!';
-                // Messaggio di errore quando viene richiamato direttamente lo script PHP
-                $wrongExt = 'Estensione file non valida!';
-                // Messaggio di errore per tipo di file non consentito
-                $tooBig = 'Il file eccede la dimensione max!';
-                // Messaggio di errore per file troppo grande
-                $thatsAll = 'Foto caricata con successo!';
-                // Messaggio di OK per upload corretto
-                $wrongUp = 'Something wrong here!';
-                // Messaggio di errore quando lo script non riesce ad eseguire l'upload
-                //***************************************
+                $noSubmitSend = '<center>Nessun upload eseguito!</center>';
+                $wrongExt = '<center>Estensione file non valida!</center>';
+                $tooBig = '<center>Il file eccede la dimensione max!</center>';
+                $thatsAll = '<font color="#9BA500"><center>Foto caricata con successo!</center></font>';
+                $wrongUp = '<center>Something wrong here!</center>';
 
-                // Controllo il submit del form HTML...
                 if (isset($_POST['send'])) {
                     $file = $_FILES['userimage']['name'];
                     
-                    // Controllo il tipo di file...
                     if (in_array(array_pop(explode('.', $file)), $estensioni)) {
 
-                        // Controllo la dimensione del file...
                         $dimensione_file = $_FILES['userimage']['size'];
                         if ($dimensione_file > $dimensione_max) {
                             print $tooBig;
@@ -168,7 +134,7 @@ if (isset($_GET['val']) && ($_GET['val'] == 'fine_sessione')) {
                     
                     $query = "INSERT INTO PuntiDiInteresse (Nome, Descrizione, Img, Categoria, Latitudine, Longitudine, Prezzo) VALUES ('$nome', '$descr', '$img', '$cat', '$lat', '$long', '$prz')";
                     $result = mysql_query($query);
-                    echo "<br>Punto di interesse inserito!";
+                    echo "<center>Punto di interesse inserito!</center>";
                 }
                 
             ?>

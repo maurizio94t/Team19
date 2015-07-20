@@ -1,7 +1,13 @@
 @font-face {
 	font-family: 'QualiteDeluxePlatinium';
-	src: url('QualiteDeluxePlatinium.eot');
-	src: local('QualiteDeluxePlatinium'), url('QualiteDeluxePlatinium.ttf') format('truetype');
+	src: url('fonts/QualiteDeluxePlatinium.eot');
+	src: local('QualiteDeluxePlatinium'), url('fonts/QualiteDeluxePlatinium.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Ubuntu-R';
+	src: url('fonts/Ubuntu-R.eot');
+	src: local('Ubuntu-R'), url('fonts/Ubuntu-R.ttf') format('truetype');
 }
 
 body {
@@ -10,12 +16,11 @@ body {
 	background: #e2e2e0;
 	color: #666;
 	font: 16px/28px;
-	font-family: "Courier", sans-serif;
+	font-family: "Ubuntu-R", sans-serif;
 	line-height: 22px;
 }
 
 h1, h2 {
-	/* text-transform:uppercase; */
 	font-weight: normal;
 }
 
@@ -36,7 +41,7 @@ button {
 }
 
 a {
-	color: #21aabd;
+	color: #9BA500;
 	text-decoration: none;
 }
 
@@ -46,45 +51,53 @@ a:hover {
 }
 
 h3 {
+	text-align: left;
+	position: relative;
+	height: 1em;
+	font: bold 350% Tahoma, Arial, sans-serif;
+	font-family: "Ubuntu-R", sans-serif;
+	margin: 1em 0 0;
+	color: #9BA500
+}
+
+h4 {
 	text-align: center;
 	position: relative;
 	height: 1em;
 	font: bold 350% Tahoma, Arial, sans-serif;
-	font-family: "Californian FB";
+	font-family: "Ubuntu-R", sans-serif;
 	margin: 1em 0 0;
-	color: #3FBCC3
+	color: #9BA500
 }
+
 h5 {
 	position: absolute;
 	margin-top: 10%;
 	margin-left: 20%;
 	font: bold 150% Tahoma, Arial, sans-serif;
-	font-family: "Franklin Gothic Book";
-	color: #3FBCC3;
+	font-family: "Ubuntu-R", sans-serif;
+	color: #9BA500;
 }
 
 h6 {
-
 	position: absolute;
 	margin-top: 15%;
 	margin-left: auto;
 	font: bold 100% Tahoma, Arial, sans-serif;
-	font-family: "Franklin Gothic Book";
+	font-family: "Ubuntu-R", sans-serif;
 	color: #2F2400;
 }
 
 #container {
-	/* width: 960px; */
 	margin: 0px auto;
-	background: #e2e2e0;
+	background: #FFFFFF;
 }
 
 #header {
 	width: 520px;
 	height: 160px;
 	padding: 80px;
-	background: #21aabd; /* colore di prima: bianco */
-	/* line-height:160px;      stessa dimensione del contenitore per centrare tutto in verticale */
+	background: #9BA500;
 }
 
 #header img {
@@ -107,16 +120,14 @@ h6 {
 }
 
 #nav {
-	/* width:960px; */
 	margin-left: 126px;
-	background: #2F2400;	/*362901*/
-	color: #fff;
+	background: #2F2400;
+	color: #FFFFFF;
 }
 
 #nav .selected {
-	/* width:960px; */
 	background: #9BA500;
-	color: #fff;
+	color: #FFFFFF;
 }
 
 #nav a {
@@ -125,14 +136,12 @@ h6 {
 	display: inline-block;
 	text-decoration: none;
 	text-transform: uppercase;
-	/*** font-family:oswald; ***/
 }
 
 #nav a:hover {
 	background: #333;
 }
 
-/*** Prova cbnello logo Z-INDEX su slider ***/
 #logo img {
 	z-index: 100;
 	position: absolute;
@@ -143,27 +152,24 @@ h6 {
 }
 
 #titolo {
-	/*width:920; */
 	padding: 10px;
 	clear: both;
-	background: #e2e2e0;
+	background: #FFFFFF;
 	margin-left: auto;
-	font-family: "Californian FB";
+	font-family: "Ubuntu-R", sans-serif;
 	font-size: 150%;
 }
 
 #mes-full {
-	/*width:920px;*/
 	padding: 60px;
 	clear: both;
-	background: #e2e2e0;
+	background: #FFFFFF;
 	margin-left: 5%;
 	margin-right: 5%;
-	font-family: "Californian FB";
+	font-family: "Ubuntu-R", sans-serif;
 	font-size: 110%;
 }
 
-/*diminuisce dimensione foto*/
 div.box {
 	width: 300px;
 	padding: auto;
@@ -173,7 +179,6 @@ div.box {
 	height: auto;
 	margin-right: 10%;
 }
-/*fine dimisuisci dim foto*/
 
 .items-evi {
 	margin-top: 5px;
@@ -211,7 +216,7 @@ div.box {
 
 #content a:hover {
 	text-decoration: none;
-	color: #21aabd;
+	color: #9BA500;
 }
 
 #content .articolo {
@@ -240,11 +245,181 @@ div.box {
 	float: right;
 }
 
-#footer {
-	/* width:920px; */
-	padding: 20px;
-	font-size: 10px;
-	clear: both;
-	background: #666;
-	color: #fff
+section{
+	background: #e2e2e0;
+	width: auto;
+}
+
+article{
+	background: #e2e2e0;
+	float: left;
+	margin-top: 10%;
+	margin-left: 40px; 
+}
+
+.aboutStrip {
+	background: #e2e2e0;
+	width: auto;
+	height: 700px;
+}
+
+.aboutStrip .profiles {
+	background: #e2e2e0;
+	border-bottom: 0px solid rgba(144, 144, 144, 0.25);
+	border-top: 10px solid rgba(144, 144, 144, 0.25);
+	padding-top: 4em;
+}
+
+.aboutStrip .profile {
+	background: #e2e2e0;
+	text-align: left;
+	width: auto;
+	width: 30%;
+}
+
+.aboutStrip .description {
+	margin top: 10px;
+	padding: 50px;
+	width: auto;
+	text-align: center;
+}
+
+.aboutStrip .profile img {
+	border-radius: 50%;
+	float: left;
+	margin-bottom: 1em;
+	margin-right: 1em;
+	width: 25%
+}
+
+.aboutStrip .description h1 {
+	color: #FFFFFF
+}
+
+.aboutStrip .profile h4 {
+	color: #FFFFFF
+}
+
+.footer-distributed {
+	background-color: #292c2f;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	font-family: "Ubuntu-R", sans-serif;
+	padding: 55px 50px;
+	margin-top: 0px;
+}
+
+.footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left {
+	width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3 {
+	color: #ffffff;
+	font-family: "QualiteDeluxePlatinium", sans-serif;
+	font-size: 80px;
+	margin: 0;
+}
+
+.footer-distributed h3 span {
+	font-size: 80px;
+	color: #9BA500;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+	color: #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a {
+	display: inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+	color: #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+	width: 35%;
+}
+
+.footer-distributed .footer-center i {
+	background-color: #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+	display: block;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+	color: #9BA500;
+	text-decoration: none;;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about {
+	line-height: 20px;
+	color: #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+	display: block;
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
 }

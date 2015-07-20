@@ -20,14 +20,9 @@ function navH($num) {
         echo '<a href="php_login/area_riservata.php">Area Riservata</a>';
     }
     if($num==4) {
-        echo '<a class="selected" href="#">Contact</a>';
+        echo '<a class="selected" href="contact.php">Contact</a>';
     }else{
-        echo '<a href="#">Contact</a>';
-    }
-    if($num==5) {
-        echo '<a class="selected" href="#">About</a>';
-    }else{
-        echo '<a href="#">About</a>';
+        echo '<a href="contact.php">Contact</a>';
     }
     ?>
 </div>
@@ -48,7 +43,7 @@ function logoH() {
 ?>
 
 <div id="logo">
-    <img src="img/ApuliaLogo.png" />
+    <a href="home.php"><img src="img/ApuliaLogo.png" /></a>
 </div>
 
 <?php
@@ -56,29 +51,62 @@ function logoH() {
 function footerH() {
 ?>
 
-<div id="footer">
-	<dl>
-		<dt>
-			Creato da
-		</dt>
-		<dd>
-			<address>
-				<a href="mailto:ApuliaGo@gmail.com">Apulia Go</a>
-			</address>
-		</dd>
-		<dt>
-			Ultimo aggiornamento
-		</dt>
-		<dd>
-			<time datetime="2015-05-16" pubdate>
-				Venerdì 16 Maggio
-			</time>
-		</dd>
-		<dd>
-	</dl>
-	<small>Tutti i contenuti sono prottetti dalla licenza creative commons</small>
-	<small>©2015 Gruppo19 - Design by T2J</small>
-</div>
+<footer class="footer-distributed">
+
+    <div class="footer-left">
+
+        <h3>Apulia<span> Go</span></h3>
+
+        <p class="footer-links">
+            <a href="home.php">Home</a>
+            ·
+            <a href="attrazioni.php">Punti di Interesse</a>
+            ·
+            <a href="php_login/area_riservata.php">Accedi</a>
+            ·
+            <a href="contact.php">Contact</a>
+        </p>
+
+        <p class="footer-company-name">
+            Team 19 &copy; 2015
+        </p>
+    </div>
+
+    <div class="footer-center">
+
+        <div>
+            <i class="fa fa-map-marker"></i>
+            <p>
+                <span>Via Orabona, 4</span> Bari, Italia
+            </p>
+        </div>
+
+        <div>
+            <i class="fa fa-phone"></i>
+            <p>
+                +1 555 123456
+            </p>
+        </div>
+
+        <div>
+            <i class="fa fa-envelope"></i>
+            <p>
+                <a href="mailto:support@company.com">support@apuliago.com</a>
+            </p>
+        </div>
+
+    </div>
+
+    <div class="footer-right">
+
+        <p class="footer-company-about">
+            <span>About the company</span>
+            Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+        </p>
+
+    </div>
+
+</footer>
 
 <?php
 }

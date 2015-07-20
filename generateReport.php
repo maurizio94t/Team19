@@ -1,42 +1,25 @@
 <?php
 require ('fpdf17/fpdf.php');
+include_once ('configDB.php');
 
 class PDF extends FPDF {
-    // Page header
     function Header() {
-        // Logo
         $this -> Image('img/ApuliaLogo.png', 10, 6, 30);
-        // Arial bold 30
         $this -> SetFont('Arial', 'IB', 30);
-        // Move to the right
         $this -> Cell(80);
-        // Title
         $this -> Cell(60, 15, 'ApuliaGo', 1, 1, 'C');
-        // Line break
         $this -> Ln(40);
     }
 
-    // Page footer
     function Footer() {
-        // Position at 1.5 cm from bottom
         $this -> SetY(-30);
         $this -> SetFont('Arial', '', 8);
         $this -> Cell(100, 10, convertStr('Questo è  un report di fine prenotazione, quindi si consiglia di stamparlo, per poi presentarlo in fase di utilizzo.'), 0, 1);
-        // Courier italic 8
         $this -> SetFont('Arial', 'I', 8);
-        // Page number
         $this -> Cell(0, 10, 'Page ' . $this -> PageNo() . '/{nb}', 0, 0, 'C');
     }
 
     function LoadData($file) {
-        // Read file lines
-        /*
-         $lines = file($file);
-         $data = array();
-         foreach ($lines as $line)
-         $data[] = explode(';', trim($line));
-         return $data;
-         */
         $fp = fopen("data.txt", "w");
         fwrite($fp, $file);
 
@@ -47,19 +30,15 @@ class PDF extends FPDF {
         return $data;
     }
 
-    // Better table
     function ImprovedTable($header, $data) {
-        // Column widths
         $w = array(15, 135, 20, 20);
-        // Header
+        
         $this -> SetFont('Arial', 'B', 10);
         for ($i = 0; $i < count($header); $i++)
             $this -> Cell($w[$i], 7, $header[$i], 1, 0, 'C');
         $this -> Ln();
         $this -> SetFont('Arial', '', 10);
-        //PrezzoTotale
         $PrzTot = 0;
-        // Data
         foreach ($data as $row) {
             $this -> Cell($w[0], 6, $row[0], 'LR');
             $this -> Cell($w[1], 6, convertStr($row[1]), 'LR');
@@ -73,53 +52,54 @@ class PDF extends FPDF {
         $this -> Cell($w[2], 6, "Totale ", 'TL', 0, 'R');
         $this -> Cell($w[3], 6, $PrzTot . convertStr(' €'), 'TR', 0, 'R');
         $this -> Ln();
-        // Closing line
         $this -> Cell(array_sum($w), 0, '', 'T');
     }
 
 }
 
-//recupero i parametri passati nella pagina (sul form dell'HTML action="generateReport.php")
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    //$nome = "Maurizio";
     $nome = $_POST['nome'];
-    //$cognome = "Troiani";
     $cognome = $_POST['cognome'];
     
-    //$GG = "13";
     $GG = $_POST['GG'];
-    //$MM = "06";
     $MM = $_POST['MM'];
-    //$AAAA = "1994";
     $AAAA = $_POST['AAAA'];
     
-    //$cf = "CBNASD95D21A662R";
     $cf = $_POST['cf'];
-    
-    //$paese = "Italia";
     $paese = $_POST['paese'];
-    //$citta = "Bari";
     $citta = $_POST['citta'];
-    //$provincia = "BA";
     $provincia = $_POST['provincia'];
-    //$cap = "70129";
     $cap = $_POST['cap'];
     
-    //$indirizzo = "via Nicola Manzari";
     $indirizzo = $_POST['indirizzo'];
-    //$numCiv = "20";
     $numCiv = $_POST['civico'];
     
-    //$tel = "3405818726";
     $tel = $_POST['tel'];
+    $Cod = $_POST['Cod'];
+    $dataI = $_POST['dataI'];
+    $dataF = $_POST['dataF'];
+    $persone = $_POST['persone'];
     
+    mysql_connect(DATA_HOST,DATA_UTENTE,DATA_PASS) or die(mysql_error());
+    mysql_select_db(DATA_DB) or die(mysql_error());
+        
+    $query="SELECT NomeP,Prezzo FROM PuntiDiInteresse WHERE Cod='$Cod'";
+    $res=mysql_query($query);
+    if($res&&mysql_num_rows($res)>0) {
+        while($row=mysql_fetch_assoc($res)) {
+            $nomeP = $row['NomeP'];
+            $prezzo = $row['Prezzo'];
+        }
+    }
     
+    $dataP = $data = date('Y-m-d');
+    $dataN = $AAAA."-".$MM."-".$GG;
+    $query = "INSERT INTO Prenotazioni (DataP, Nome, Cognome, CF, DataN, Tel, DataI, DataF, CodPt) VALUES ('$dataP', '$nome', '$cognome', '$cf', '$dataN', '$tel', '$dataI', '$dataF', '$Cod')";
+    $result = mysql_query($query);
 } else {
     echo "Errore inaspettato..";
 }
 
-// Instanciation of inherited class
 $pdf = new PDF();
 $pdf -> AliasNbPages();
 $pdf -> AddPage();
@@ -130,7 +110,7 @@ $pdf -> SetMargins(10, 10);
 $pdf -> Line(5, 50, 205, 50);
 
 $pdf -> SetFont('Arial', '', 12);
-$pdf -> Cell(0, 5, $nome . " " . $cognome . " - " . $tel, 0, 1);
+$pdf -> Cell(0, 5, $nome . " " . $cognome ." - " . $tel, 0, 1);
 $pdf -> Cell(0, 5, $GG . "-" . $MM . "-" . $AAAA, 0, 1);
 $pdf -> Cell(0, 5, $cf, 0, 1);
 $pdf -> Ln(3);
@@ -138,14 +118,17 @@ $pdf -> Cell(0, 5, $indirizzo . "," . $numCiv, 0, 1);
 $pdf -> Cell(0, 5, $paese, 0, 1);
 $pdf -> Cell(0, 5, $citta . " (" . $provincia . "), " . $cap, 0, 1);
 
-$pdf -> Cell(0, 5, "Ciccionn!", 0, 1, 'R');
-// Column headings
-$header = array(convertStr('Codice'), convertStr('Descrizione'), convertStr('Quantità'), convertStr('Prezzo'));
-// Data loading
-$data = $pdf -> LoadData("003;Corso di sub base con 5 immersioni;1;39\n024;Pranzo sul mare con specialità tipiche;2;23\n003;Corso di sub base con 5 immersioni;1;39");
+$ITdataI = new DateTime($dataI);
+$ITdataF = new DateTime($dataF);
+$pdf -> Cell(0, 5, "Dal ". $ITdataI->format('d-m-Y') . " al ". $ITdataF->format('d-m-Y'), 0, 1, 'R');
+
+$header = array(convertStr('Codice'), convertStr('Descrizione'), convertStr('Persone'), convertStr('Prezzo'));
+$data = $pdf -> LoadData($Cod.";".$nomeP.";".$persone.";". $prezzo);
 $pdf -> SetFont('Arial', '', 14);
 $pdf -> ImprovedTable($header, $data);
 $pdf -> Output();
+
+
 
 function convertStr($str) {
     return iconv('UTF-8', 'windows-1252', $str);

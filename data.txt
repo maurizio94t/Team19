@@ -1,3 +1,1 @@
-003;Corso di sub base con 5 immersioni;1;39
-024;Pranzo sul mare con specialità tipiche;2;23
-003;Corso di sub base con 5 immersioni;1;39
+2;Visita guidata con guida turistica presso i Trulli di Alberobello;3;39
